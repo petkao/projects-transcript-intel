@@ -229,7 +229,9 @@ print(vader_label.value_counts())
 # %%
 from transformers import pipeline as hf_pipeline
 
-_distilbert = hf_pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english", truncation=True)
+# device="cpu" avoids a known PyTorch MPS (Apple Silicon GPU) crash on some builds -- see
+# the same note in scripts/categorize.py embed_transcripts(). Tiny one-time batch, no cost.
+_distilbert = hf_pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english", truncation=True, device="cpu")
 sample = df.sample(20, random_state=1)
 rows = []
 for _, r in sample.iterrows():

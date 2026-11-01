@@ -98,7 +98,12 @@ def strip_speakers(text: str) -> str:
 
 
 def embed_transcripts(df: pd.DataFrame, model_name: str = "all-MiniLM-L6-v2") -> np.ndarray:
-    model = SentenceTransformer(model_name)
+    # device="cpu" is deliberate: on some PyTorch/macOS MPS (Apple Silicon GPU) builds,
+    # this specific model hits an uncaught MPSNDArray exception and hard-crashes the
+    # process. The embedding workload here is tiny (103 short texts, one-time batch),
+    # so there's no real latency cost to just avoiding the GPU backend entirely -- and
+    # it keeps this reproducible on Linux/Windows/non-Apple-Silicon machines too.
+    model = SentenceTransformer(model_name, device="cpu")
     clean = df["transcript"].apply(strip_speakers)
     return model.encode(clean.tolist(), show_progress_bar=False)
 
