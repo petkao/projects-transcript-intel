@@ -1,0 +1,104 @@
+call_id,call_type,date,duration_minutes,account_name,word_count
+CALL-0001,external,2026-07-04,19,Ridgeline Energy,138
+CALL-0002,support,2026-07-04,16,Ashford Realty Group,194
+CALL-0003,internal,2026-07-08,25,Platform Team,94
+CALL-0004,support,2026-07-08,7,Pinecrest Education,75
+CALL-0005,support,2026-07-08,12,Alderman Consulting,83
+CALL-0006,support,2026-07-09,12,Ridgeline Energy,179
+CALL-0007,internal,2026-07-09,25,Platform Team,173
+CALL-0008,support,2026-07-10,20,Summit Manufacturing,165
+CALL-0009,internal,2026-07-10,20,Platform Team,118
+CALL-0010,support,2026-07-11,8,Brightfield Health,177
+CALL-0011,external,2026-07-15,20,Clearwater Biotech,136
+CALL-0012,support,2026-07-17,13,Marbury Legal Services,174
+CALL-0013,support,2026-07-18,14,Delacroix Hospitality,181
+CALL-0014,support,2026-07-20,12,Clearwater Biotech,179
+CALL-0015,internal,2026-07-21,10,Cross-team,88
+CALL-0016,internal,2026-07-23,10,Cross-team,88
+CALL-0017,internal,2026-07-23,15,Platform Team,100
+CALL-0018,external,2026-07-24,12,Clearwater Biotech,104
+CALL-0019,external,2026-07-25,31,Silverline Telecom,136
+CALL-0020,internal,2026-07-27,25,Platform Team,94
+CALL-0021,support,2026-07-28,12,Ashford Realty Group,89
+CALL-0022,support,2026-07-28,9,Silverline Telecom,76
+CALL-0023,external,2026-07-29,25,Castellan Insurance,138
+CALL-0024,internal,2026-07-29,10,Cross-team,88
+CALL-0025,external,2026-07-29,18,Summit Manufacturing,179
+CALL-0026,external,2026-07-30,20,Silverline Telecom,138
+CALL-0027,external,2026-07-31,11,Clearwater Biotech,104
+CALL-0028,support,2026-07-31,18,Brightfield Health,86
+CALL-0029,external,2026-08-01,13,Summit Manufacturing,104
+CALL-0030,internal,2026-08-02,15,Platform Team,74
+CALL-0031,internal,2026-08-04,18,Cross-functional,96
+CALL-0032,external,2026-08-04,24,Ashford Realty Group,179
+CALL-0033,external,2026-08-05,23,Vantage Retail Group,155
+CALL-0034,internal,2026-08-05,20,Platform Team,118
+CALL-0035,internal,2026-08-06,20,Cross-functional,104
+CALL-0036,external,2026-08-06,20,Silverline Telecom,83
+CALL-0037,internal,2026-08-06,20,Platform Team,118
+CALL-0038,internal,2026-08-07,20,Cross-functional,104
+CALL-0039,external,2026-08-08,15,Union Square Media,79
+CALL-0040,external,2026-08-09,17,Northwind Logistics,138
+CALL-0041,internal,2026-08-09,20,Cross-functional,104
+CALL-0042,internal,2026-08-10,12,Platform Team,95
+CALL-0043,support,2026-08-10,15,Clearwater Biotech,88
+CALL-0044,internal,2026-08-11,15,Platform Team,94
+CALL-0045,external,2026-08-11,11,Alderman Consulting,75
+CALL-0046,external,2026-08-12,21,Trestle Robotics,179
+CALL-0047,internal,2026-08-12,18,Cross-functional,96
+CALL-0048,support,2026-08-12,13,Castellan Insurance,95
+CALL-0049,internal,2026-08-13,15,Platform Team,94
+CALL-0050,external,2026-08-14,16,Fenwick & Co,138
+CALL-0051,support,2026-08-15,15,Westbrook Logistics,83
+CALL-0052,support,2026-08-16,5,Pinecrest Education,89
+CALL-0053,internal,2026-08-17,15,Platform Team,74
+CALL-0054,support,2026-08-17,8,Ashford Realty Group,96
+CALL-0055,external,2026-08-18,23,Brightfield Health,155
+CALL-0056,external,2026-08-19,30,Westbrook Logistics,136
+CALL-0057,support,2026-08-21,9,Brightfield Health,79
+CALL-0058,external,2026-08-22,15,Summit Manufacturing,155
+CALL-0059,support,2026-08-23,7,Granite Peak Manufacturing,101
+CALL-0060,internal,2026-08-23,25,Platform Team,94
+CALL-0061,support,2026-08-24,6,Harborview Financial,88
+CALL-0062,support,2026-08-25,4,Alderman Consulting,96
+CALL-0063,support,2026-08-25,17,Harborview Financial,71
+CALL-0064,internal,2026-08-25,18,Cross-functional,96
+CALL-0065,external,2026-08-26,18,Ridgeline Energy,75
+CALL-0066,internal,2026-08-26,20,Platform Team,118
+CALL-0067,support,2026-08-26,18,Ashford Realty Group,82
+CALL-0068,support,2026-08-27,13,Vantage Retail Group,81
+CALL-0069,external,2026-08-27,20,Union Square Media,155
+CALL-0070,external,2026-08-28,23,Ashford Realty Group,157
+CALL-0071,internal,2026-08-28,15,Platform Team,94
+CALL-0072,internal,2026-08-28,22,Cross-functional,112
+CALL-0073,support,2026-08-28,6,Pinecrest Education,82
+CALL-0074,external,2026-08-28,26,Trestle Robotics,138
+CALL-0075,internal,2026-08-29,25,Platform Team,94
+CALL-0076,internal,2026-08-30,22,Cross-functional,112
+CALL-0077,support,2026-09-03,17,Vantage Retail Group,89
+CALL-0078,support,2026-09-04,11,Castellan Insurance,103
+CALL-0079,external,2026-09-05,24,Summit Manufacturing,157
+CALL-0080,internal,2026-09-06,30,Product Team,133
+CALL-0081,internal,2026-09-06,18,Cross-functional,96
+CALL-0082,external,2026-09-07,14,Harborview Financial,157
+CALL-0083,support,2026-09-07,18,Summit Manufacturing,77
+CALL-0084,internal,2026-09-08,25,Platform Team,94
+CALL-0085,support,2026-09-08,10,Silverline Telecom,89
+CALL-0086,external,2026-09-09,16,Pinecrest Education,157
+CALL-0087,internal,2026-09-10,30,Product Team,133
+CALL-0088,support,2026-09-11,15,Marbury Legal Services,86
+CALL-0089,external,2026-09-12,29,Vantage Retail Group,136
+CALL-0090,support,2026-09-12,6,Fenwick & Co,89
+CALL-0091,internal,2026-09-13,18,Cross-functional,96
+CALL-0092,support,2026-09-14,6,Marbury Legal Services,76
+CALL-0093,external,2026-09-15,25,Harborview Financial,157
+CALL-0094,internal,2026-09-15,30,Product Team,133
+CALL-0095,internal,2026-09-18,22,Cross-functional,112
+CALL-0096,external,2026-09-18,15,Brightfield Health,157
+CALL-0097,support,2026-09-22,12,Ashford Realty Group,101
+CALL-0098,external,2026-09-23,23,Pinecrest Education,138
+CALL-0099,internal,2026-09-24,30,Product Team,133
+CALL-0100,external,2026-09-24,14,Alderman Consulting,75
+CALL-0101,external,2026-09-25,8,Union Square Media,69
+CALL-0102,internal,2026-09-28,15,Platform Team,74
+CALL-0103,support,2026-09-28,14,Ashford Realty Group,79

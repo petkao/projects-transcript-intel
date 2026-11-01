@@ -1,0 +1,11 @@
+pandas
+numpy
+scikit-learn
+sentence-transformers
+vaderSentiment
+transformers
+torch
+matplotlib
+jupyter
+jupytext
+nbconvert

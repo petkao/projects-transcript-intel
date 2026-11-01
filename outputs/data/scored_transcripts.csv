@@ -1,0 +1,811 @@
+call_id,call_type,date,duration_minutes,account_name,participants,transcript,word_count,synthetic_topic_label,cluster,category,theme,scored_text,vader_compound,sentiment_score,sentiment_label,week,churn_risk_flag
+CALL-0001,external,2026-07-04,19,Ridgeline Energy,"['Casey Lindqvist', 'Jules Ferreira']","Casey Lindqvist: Hi Jules Ferreira, thanks for making time -- wanted to talk through the renewal coming up next month.
+Jules Ferreira: Sure, happy to. Overall it's been a good year, usage has actually grown across a couple teams.
+Casey Lindqvist: That matches what I'm seeing on our end too -- adoption's up about thirty percent year over year for your org.
+Jules Ferreira: Yeah, the ops team basically lives in the tool now. I don't see any reason we wouldn't renew.
+Casey Lindqvist: Great to hear. Given the growth, would it make sense to talk about adding seats for the two newer teams?
+Jules Ferreira: Possibly, let me check budget on my end, but I'm open to the conversation.
+Casey Lindqvist: Perfect, I'll send over a proposal with a couple options and we can regroup next week.",138,renewal_healthy,4,Healthy Renewal & Expansion,account health/renewal,"Sure, happy to. Overall it's been a good year, usage has actually grown across a couple teams. Yeah, the ops team basically lives in the tool now. I don't see any reason we wouldn't renew. Possibly, let me check budget on my end, but I'm open to the conversation.",0.6757,0.8,positive,2026-06-29,False
+CALL-0002,support,2026-07-04,16,Ashford Realty Group,"['Alexis Park', 'Morgan Reyes']","Morgan Reyes: Hey, Morgan Reyes here from Ashford Realty Group. Our export is cutting off data and it's starting to really hurt us.
+Alexis Park: I'm sorry to hear that -- can you walk me through exactly what happened?
+Morgan Reyes: We pulled a report with about eighty thousand rows and it just stops at fifty thousand. No error, no warning, it just truncates.
+Morgan Reyes: It's not the end of the world, but it's the second time this month.
+Alexis Park: I completely understand, and I'm sorry you're hitting this again. Let me pull up the open bug on this.
+Alexis Park: I can see there's an existing ticket (EXP-1142) tracking exactly this -- exports over fifty thousand rows silently truncate due to a pagination limit in the export worker. It's flagged as high priority but I don't have a ship date yet.
+Morgan Reyes: Okay. I need something more concrete than 'we're working on it.' Can someone follow up with an actual timeline by Friday?
+Alexis Park: Absolutely, I'll flag this as a priority follow-up and loop in our escalations team so you get a real timeline, not just a ticket number.",194,export_bug,3,Export/Reporting Bug -- Customer Impact,export/reporting bug,"Hey, Morgan Reyes here from Ashford Realty Group. Our export is cutting off data and it's starting to really hurt us. We pulled a report with about eighty thousand rows and it just stops at fifty thousand. No error, no warning, it just truncates. It's not the end of the world, but it's the second time this month. Okay. I need something more concrete than 'we're working on it.' Can someone follow up with an actual timeline by Friday?",0.2604,-1.0,negative,2026-06-29,False
+CALL-0003,internal,2026-07-08,25,Platform Team,['Tobias Krantz'],"Sofia Reyes: Let's lock sprint scope. Top priority is the export pagination fix, that's now a must-ship.
+Finn Walsh: I can take that, I already scoped it last week.
+Finn Walsh: I'll take the API rate limit work we pushed from last sprint, plus a couple smaller bug fixes from the backlog.
+Sofia Reyes: Sounds good. Anything blocking either of you?
+Finn Walsh: Just need a staging dataset large enough to properly test the export fix, over a hundred thousand rows.
+Sofia Reyes: I'll get that set up today so it doesn't block you.",94,sprint_planning,0,Sprint Planning & Eng Backlog,roadmap/planning,"Sofia Reyes: Let's lock sprint scope. Top priority is the export pagination fix, that's now a must-ship.
+Finn Walsh: I can take that, I already scoped it last week.
+Finn Walsh: I'll take the API rate limit work we pushed from last sprint, plus a couple smaller bug fixes from the backlog.
+Sofia Reyes: Sounds good. Anything blocking either of you?
+Finn Walsh: Just need a staging dataset large enough to properly test the export fix, over a hundred thousand rows.
+Sofia Reyes: I'll get that set up today so it doesn't block you.",0.5817,0.05,neutral,2026-07-06,False
+CALL-0004,support,2026-07-08,7,Pinecrest Education,"['Dana Okafor', 'Taylor Grant']","Taylor Grant: Hey, Taylor Grant here, hoping you can help with something.
+Dana Okafor: Of course, what's going on?
+Taylor Grant: The onboarding for our new hires went way faster this time, whatever you changed worked.
+Dana Okafor: That's great feedback, we did rework the onboarding checklist recently, glad it's showing.
+Taylor Grant: Alright, that's good to know. Anything you need from my side?
+Dana Okafor: All good, I'll keep you posted if anything changes.",75,positive_checkin,9,Routine Support Resolution & Check-ins,positive checkin,"Hey, Taylor Grant here, hoping you can help with something. The onboarding for our new hires went way faster this time, whatever you changed worked. Alright, that's good to know. Anything you need from my side?",0.8979,0.85,positive,2026-07-06,False
+CALL-0005,support,2026-07-08,12,Alderman Consulting,"['Dana Okafor', 'Sam Oduya']","Sam Oduya: Hi, this is Sam Oduya, calling about an issue we're seeing.
+Dana Okafor: Of course, what's going on?
+Sam Oduya: Half our team got locked out this morning, nobody can log in through our SSO.
+Dana Okafor: That sounds like it could be a SAML assertion issue on our end -- let me check the identity provider logs for your org.
+Sam Oduya: Okay, that makes sense, thanks for explaining.
+Dana Okafor: All good, I'll keep you posted if anything changes.",83,login_sso,11,Login/SSO & General Support Resolution,auth/access,"Hi, this is Sam Oduya, calling about an issue we're seeing. Half our team got locked out this morning, nobody can log in through our SSO. Okay, that makes sense, thanks for explaining.",0.5859,-0.7,negative,2026-07-06,False
+CALL-0006,support,2026-07-09,12,Ridgeline Energy,"['Omar Siddiqui', 'Owen Castellan']","Owen Castellan: Hi, this is Owen Castellan from Ridgeline Energy. We're having a real problem with the reporting export again.
+Omar Siddiqui: I'm sorry to hear that -- can you walk me through exactly what happened?
+Owen Castellan: Every time we export anything over fifty thousand rows the file just cuts off silently. We almost sent bad numbers to our board.
+Owen Castellan: Can you at least confirm there's a ticket open for this already?
+Omar Siddiqui: I completely understand, and I'm sorry you're hitting this again. Let me pull up the open bug on this.
+Omar Siddiqui: I can see there's an existing ticket (EXP-1142) tracking exactly this -- exports over fifty thousand rows silently truncate due to a pagination limit in the export worker. It's flagged as high priority but I don't have a ship date yet.
+Owen Castellan: Alright, I'll wait, but please have your team call me directly when there's an update. This can't keep happening.
+Omar Siddiqui: I'll personally make sure this gets escalated today and someone reaches back out with a concrete date.",179,export_bug,3,Export/Reporting Bug -- Customer Impact,export/reporting bug,"Hi, this is Owen Castellan from Ridgeline Energy. We're having a real problem with the reporting export again. Every time we export anything over fifty thousand rows the file just cuts off silently. We almost sent bad numbers to our board. Can you at least confirm there's a ticket open for this already? Alright, I'll wait, but please have your team call me directly when there's an update. This can't keep happening.",0.1127,-0.8500000000000001,negative,2026-07-06,False
+CALL-0007,internal,2026-07-09,25,Platform Team,"['Sofia Reyes', 'Finn Walsh']","Tobias Krantz: Let's talk about EXP-1142, the export truncation bug. We've had three support tickets on this in the last two weeks.
+Nikhil Rao: Yeah I looked at it briefly, it's the export worker -- there's a hardcoded pagination cutoff at fifty thousand rows that was meant to be temporary.
+Sam Doyle: That cutoff's been there since the original export rewrite, I think everyone just forgot about it because it rarely got hit.
+Tobias Krantz: It's getting hit now because our bigger accounts have way more data than they did a year ago.
+Nikhil Rao: Makes sense. Fixing it properly means re-architecting the pagination rather than just raising the limit, which is a bigger lift.
+Tobias Krantz: How big are we talking?
+Sam Doyle: Maybe a week of real work plus testing on large datasets. It's not trivial, but it's not a huge project either.
+Tobias Krantz: Okay, given we've got three tickets and at least one account threatening churn over it, I want this prioritized for next sprint, not the one after.",173,bug_triage_export_early,3,Export/Reporting Bug -- Customer Impact,export/reporting bug,"Tobias Krantz: Let's talk about EXP-1142, the export truncation bug. We've had three support tickets on this in the last two weeks.
+Nikhil Rao: Yeah I looked at it briefly, it's the export worker -- there's a hardcoded pagination cutoff at fifty thousand rows that was meant to be temporary.
+Sam Doyle: That cutoff's been there since the original export rewrite, I think everyone just forgot about it because it rarely got hit.
+Tobias Krantz: It's getting hit now because our bigger accounts have way more data than they did a year ago.
+Nikhil Rao: Makes sense. Fixing it properly means re-architecting the pagination rather than just raising the limit, which is a bigger lift.
+Tobias Krantz: How big are we talking?
+Sam Doyle: Maybe a week of real work plus testing on large datasets. It's not trivial, but it's not a huge project either.
+Tobias Krantz: Okay, given we've got three tickets and at least one account threatening churn over it, I want this prioritized for next sprint, not the one after.",-0.2746,-0.44999999999999996,negative,2026-07-06,False
+CALL-0008,support,2026-07-10,20,Summit Manufacturing,"['Ruth Fontaine', 'Chris Patel']","Chris Patel: Hi, this is Chris Patel from Summit Manufacturing. We're having a real problem with the reporting export again.
+Ruth Fontaine: I'm sorry to hear that -- can you walk me through exactly what happened?
+Chris Patel: We pulled a report with about eighty thousand rows and it just stops at fifty thousand. No error, no warning, it just truncates.
+Chris Patel: Can you at least confirm there's a ticket open for this already?
+Ruth Fontaine: I completely understand, and I'm sorry you're hitting this again. Let me pull up the open bug on this.
+Ruth Fontaine: Looking at the backlog, this is a known issue with the export worker's row limit. It's been escalated to engineering but I can't promise a date today.
+Chris Patel: Alright, I'll wait, but please have your team call me directly when there's an update. This can't keep happening.
+Ruth Fontaine: I'll personally make sure this gets escalated today and someone reaches back out with a concrete date.",165,export_bug,3,Export/Reporting Bug -- Customer Impact,export/reporting bug,"Hi, this is Chris Patel from Summit Manufacturing. We're having a real problem with the reporting export again. We pulled a report with about eighty thousand rows and it just stops at fifty thousand. No error, no warning, it just truncates. Can you at least confirm there's a ticket open for this already? Alright, I'll wait, but please have your team call me directly when there's an update. This can't keep happening.",0.5982,-1.0,negative,2026-07-06,False
+CALL-0009,internal,2026-07-10,20,Platform Team,['Tobias Krantz'],"Tobias Krantz: Let's go through the postmortem for last week's regional slowdown.
+Sam Doyle: Root cause was a database connection pool exhaustion during a traffic spike from one large customer's batch job.
+Beatriz Souza: We didn't have alerting on pool saturation specifically, only on overall latency, so we caught it later than we should have.
+Tobias Krantz: How long was the customer-visible impact?
+Sam Doyle: About forty minutes of degraded performance, no full outage, but several customers noticed and a few filed support tickets.
+Tobias Krantz: Okay, action items: add pool saturation alerting, and let's look at rate-limiting batch jobs from a single tenant.
+Beatriz Souza: I'll own the alerting piece, should be done by end of week.",118,incident_postmortem,7,Incident Postmortem (Infra/Performance),incident/postmortem,"Tobias Krantz: Let's go through the postmortem for last week's regional slowdown.
+Sam Doyle: Root cause was a database connection pool exhaustion during a traffic spike from one large customer's batch job.
+Beatriz Souza: We didn't have alerting on pool saturation specifically, only on overall latency, so we caught it later than we should have.
+Tobias Krantz: How long was the customer-visible impact?
+Sam Doyle: About forty minutes of degraded performance, no full outage, but several customers noticed and a few filed support tickets.
+Tobias Krantz: Okay, action items: add pool saturation alerting, and let's look at rate-limiting batch jobs from a single tenant.
+Beatriz Souza: I'll own the alerting piece, should be done by end of week.",0.3919,-0.15,negative,2026-07-06,False
+CALL-0010,support,2026-07-11,8,Brightfield Health,"['Alexis Park', 'Priya Nair']","Priya Nair: Hi, this is Priya Nair from Brightfield Health. We're having a real problem with the reporting export again.
+Alexis Park: I'm sorry to hear that -- can you walk me through exactly what happened?
+Priya Nair: Every time we export anything over fifty thousand rows the file just cuts off silently. We almost sent bad numbers to our board.
+Priya Nair: It's not the end of the world, but it's the second time this month.
+Alexis Park: That's really frustrating to hear, especially the second time around. Let me check the status on the engineering side.
+Alexis Park: Looking at the backlog, this is a known issue with the export worker's row limit. It's been escalated to engineering but I can't promise a date today.
+Priya Nair: Okay. I need something more concrete than 'we're working on it.' Can someone follow up with an actual timeline by Friday?
+Alexis Park: Absolutely, I'll flag this as a priority follow-up and loop in our escalations team so you get a real timeline, not just a ticket number.",177,export_bug,3,Export/Reporting Bug -- Customer Impact,export/reporting bug,"Hi, this is Priya Nair from Brightfield Health. We're having a real problem with the reporting export again. Every time we export anything over fifty thousand rows the file just cuts off silently. We almost sent bad numbers to our board. It's not the end of the world, but it's the second time this month. Okay. I need something more concrete than 'we're working on it.' Can someone follow up with an actual timeline by Friday?",-0.2984,-0.8500000000000001,negative,2026-07-06,False
+CALL-0011,external,2026-07-15,20,Clearwater Biotech,"['Marcus Webb', 'Taylor Grant']","Marcus Webb: Thanks for joining the QBR, Taylor Grant. Let's walk through the last quarter.
+Taylor Grant: Sounds good, go ahead.
+Marcus Webb: Usage is up, active users grew from about 80 to 110, and your team's running roughly 40% more reports than last quarter.
+Taylor Grant: That tracks, we rolled it out to the regional ops teams in April.
+Marcus Webb: On the support side, you had six tickets this quarter, mostly resolved within a day except the export issue which took longer.
+Taylor Grant: Yeah that one was rough, but otherwise it's been smooth. Any new features coming we should know about?
+Marcus Webb: Yes, actually -- we just launched Smart Alerts, it might be relevant for your ops team's monitoring use case.
+Taylor Grant: Interesting, send me more on that, could be useful.",136,qbr,2,"Smart Alerts Launch, Upsell & QBR",account health/renewal,"Sounds good, go ahead. That tracks, we rolled it out to the regional ops teams in April. Yeah that one was rough, but otherwise it's been smooth. Any new features coming we should know about? Interesting, send me more on that, could be useful.",0.8735,0.3,positive,2026-07-13,False
+CALL-0012,support,2026-07-17,13,Marbury Legal Services,"['Dana Okafor', 'Nadia Brooks']","Nadia Brooks: Hi, this is Nadia Brooks from Marbury Legal Services. We're having a real problem with the reporting export again.
+Dana Okafor: I'm sorry to hear that -- can you walk me through exactly what happened?
+Nadia Brooks: We pulled a report with about eighty thousand rows and it just stops at fifty thousand. No error, no warning, it just truncates.
+Nadia Brooks: Can you at least confirm there's a ticket open for this already?
+Dana Okafor: That's really frustrating to hear, especially the second time around. Let me check the status on the engineering side.
+Dana Okafor: Looking at the backlog, this is a known issue with the export worker's row limit. It's been escalated to engineering but I can't promise a date today.
+Nadia Brooks: Alright, I'll wait, but please have your team call me directly when there's an update. This can't keep happening.
+Dana Okafor: Absolutely, I'll flag this as a priority follow-up and loop in our escalations team so you get a real timeline, not just a ticket number.",174,export_bug,3,Export/Reporting Bug -- Customer Impact,export/reporting bug,"Hi, this is Nadia Brooks from Marbury Legal Services. We're having a real problem with the reporting export again. We pulled a report with about eighty thousand rows and it just stops at fifty thousand. No error, no warning, it just truncates. Can you at least confirm there's a ticket open for this already? Alright, I'll wait, but please have your team call me directly when there's an update. This can't keep happening.",0.6299,-1.0,negative,2026-07-13,False
+CALL-0013,support,2026-07-18,14,Delacroix Hospitality,"['Ruth Fontaine', 'Chris Patel']","Chris Patel: Hi, it's Chris Patel at Delacroix Hospitality. Same export issue as last time -- it's back.
+Ruth Fontaine: I'm sorry to hear that -- can you walk me through exactly what happened?
+Chris Patel: Our finance team built a quarterly summary off one of these exports and didn't notice it was incomplete until a VP caught it.
+Chris Patel: It's not the end of the world, but it's the second time this month.
+Ruth Fontaine: I completely understand, and I'm sorry you're hitting this again. Let me pull up the open bug on this.
+Ruth Fontaine: I can see there's an existing ticket (EXP-1142) tracking exactly this -- exports over fifty thousand rows silently truncate due to a pagination limit in the export worker. It's flagged as high priority but I don't have a ship date yet.
+Chris Patel: Okay. I need something more concrete than 'we're working on it.' Can someone follow up with an actual timeline by Friday?
+Ruth Fontaine: I'll personally make sure this gets escalated today and someone reaches back out with a concrete date.",181,export_bug,3,Export/Reporting Bug -- Customer Impact,export/reporting bug,"Hi, it's Chris Patel at Delacroix Hospitality. Same export issue as last time -- it's back. Our finance team built a quarterly summary off one of these exports and didn't notice it was incomplete until a VP caught it. It's not the end of the world, but it's the second time this month. Okay. I need something more concrete than 'we're working on it.' Can someone follow up with an actual timeline by Friday?",0.3291,-0.7000000000000001,negative,2026-07-13,False
+CALL-0014,support,2026-07-20,12,Clearwater Biotech,"['Liam Chen', 'Owen Castellan']","Owen Castellan: Hi, it's Owen Castellan at Clearwater Biotech. Same export issue as last time -- it's back.
+Liam Chen: I'm sorry to hear that -- can you walk me through exactly what happened?
+Owen Castellan: Every time we export anything over fifty thousand rows the file just cuts off silently. We almost sent bad numbers to our board.
+Owen Castellan: It's not the end of the world, but it's the second time this month.
+Liam Chen: I completely understand, and I'm sorry you're hitting this again. Let me pull up the open bug on this.
+Liam Chen: I can see there's an existing ticket (EXP-1142) tracking exactly this -- exports over fifty thousand rows silently truncate due to a pagination limit in the export worker. It's flagged as high priority but I don't have a ship date yet.
+Owen Castellan: Alright, I'll wait, but please have your team call me directly when there's an update. This can't keep happening.
+Liam Chen: I'll personally make sure this gets escalated today and someone reaches back out with a concrete date.",179,export_bug,3,Export/Reporting Bug -- Customer Impact,export/reporting bug,"Hi, it's Owen Castellan at Clearwater Biotech. Same export issue as last time -- it's back. Every time we export anything over fifty thousand rows the file just cuts off silently. We almost sent bad numbers to our board. It's not the end of the world, but it's the second time this month. Alright, I'll wait, but please have your team call me directly when there's an update. This can't keep happening.",0.4096,-0.8500000000000001,negative,2026-07-20,False
+CALL-0015,internal,2026-07-21,10,Cross-team,['Sofia Reyes'],"Omar Siddiqui: I want to flag that the export bug has now come up in a renewal call, not just support tickets. It's a real risk for at least one account.
+Tobias Krantz: Got it, that changes the priority. Engineering already has it on the radar but I'll push to pull it forward.
+Omar Siddiqui: I'd appreciate that. I don't want to lose this account over something that's fixable.
+Tobias Krantz: Agreed, let me talk to the eng lead today and get you a real timeline by tomorrow.",88,cross_team_escalation_export,10,Mixed: Export Escalation Urgency + Staffing,export/reporting bug,"Omar Siddiqui: I want to flag that the export bug has now come up in a renewal call, not just support tickets. It's a real risk for at least one account.
+Tobias Krantz: Got it, that changes the priority. Engineering already has it on the radar but I'll push to pull it forward.
+Omar Siddiqui: I'd appreciate that. I don't want to lose this account over something that's fixable.
+Tobias Krantz: Agreed, let me talk to the eng lead today and get you a real timeline by tomorrow.",0.7734,-0.25,negative,2026-07-20,False
+CALL-0016,internal,2026-07-23,10,Cross-team,['Sofia Reyes'],"Omar Siddiqui: I want to flag that the export bug has now come up in a renewal call, not just support tickets. It's a real risk for at least one account.
+Sofia Reyes: Got it, that changes the priority. Engineering already has it on the radar but I'll push to pull it forward.
+Omar Siddiqui: I'd appreciate that. I don't want to lose this account over something that's fixable.
+Sofia Reyes: Agreed, let me talk to the eng lead today and get you a real timeline by tomorrow.",88,cross_team_escalation_export,10,Mixed: Export Escalation Urgency + Staffing,export/reporting bug,"Omar Siddiqui: I want to flag that the export bug has now come up in a renewal call, not just support tickets. It's a real risk for at least one account.
+Sofia Reyes: Got it, that changes the priority. Engineering already has it on the radar but I'll push to pull it forward.
+Omar Siddiqui: I'd appreciate that. I don't want to lose this account over something that's fixable.
+Sofia Reyes: Agreed, let me talk to the eng lead today and get you a real timeline by tomorrow.",0.7734,-0.25,negative,2026-07-20,False
+CALL-0017,internal,2026-07-23,15,Platform Team,"['Tobias Krantz', 'Finn Walsh']","Sofia Reyes: Support just flagged that the export bug came up again, this time with a customer explicitly tying it to renewal risk.
+Finn Walsh: We haven't started the fix yet, it's queued for next sprint per last week's call.
+Sofia Reyes: I need to pull it forward. Can we start this now instead of waiting for sprint planning?
+Greta Holm: We can, it'll bump something else, probably the API rate limit work.
+Sofia Reyes: That's an acceptable tradeoff given this is now a revenue risk, not just a bug.
+Finn Walsh: Understood, I'll start on the pagination rework today.",100,bug_triage_export_escalation,0,Sprint Planning & Eng Backlog,export/reporting bug,"Sofia Reyes: Support just flagged that the export bug came up again, this time with a customer explicitly tying it to renewal risk.
+Finn Walsh: We haven't started the fix yet, it's queued for next sprint per last week's call.
+Sofia Reyes: I need to pull it forward. Can we start this now instead of waiting for sprint planning?
+Greta Holm: We can, it'll bump something else, probably the API rate limit work.
+Sofia Reyes: That's an acceptable tradeoff given this is now a revenue risk, not just a bug.
+Finn Walsh: Understood, I'll start on the pagination rework today.",0.2023,-0.6499999999999999,negative,2026-07-20,False
+CALL-0018,external,2026-07-24,12,Clearwater Biotech,"['Jordan Mills', 'Taylor Grant']","Taylor Grant: Hey, I wanted to escalate something directly to you -- we're still waiting on the export bug fix.
+Jordan Mills: I know, I'm sorry it's dragged on this long. Let me get you a direct update from engineering today instead of routing through support again.
+Taylor Grant: I'd appreciate that. This has come up in three support calls now and nothing's changed.
+Jordan Mills: Understood, that's on us. I'll personally check with the eng lead and call you back today with a real date.
+Taylor Grant: Thank you, I just need to feel like this is being taken seriously at this point.",104,escalation_unresolved,3,Export/Reporting Bug -- Customer Impact,export/reporting bug,"Hey, I wanted to escalate something directly to you -- we're still waiting on the export bug fix. I'd appreciate that. This has come up in three support calls now and nothing's changed. Thank you, I just need to feel like this is being taken seriously at this point.",0.8271,-0.95,negative,2026-07-20,False
+CALL-0019,external,2026-07-25,31,Silverline Telecom,"['Priya Anand', 'Owen Castellan']","Priya Anand: Thanks for joining the QBR, Owen Castellan. Let's walk through the last quarter.
+Owen Castellan: Sounds good, go ahead.
+Priya Anand: Usage is up, active users grew from about 80 to 110, and your team's running roughly 40% more reports than last quarter.
+Owen Castellan: That tracks, we rolled it out to the regional ops teams in April.
+Priya Anand: On the support side, you had six tickets this quarter, mostly resolved within a day except the export issue which took longer.
+Owen Castellan: Yeah that one was rough, but otherwise it's been smooth. Any new features coming we should know about?
+Priya Anand: Yes, actually -- we just launched Smart Alerts, it might be relevant for your ops team's monitoring use case.
+Owen Castellan: Interesting, send me more on that, could be useful.",136,qbr,2,"Smart Alerts Launch, Upsell & QBR",account health/renewal,"Sounds good, go ahead. That tracks, we rolled it out to the regional ops teams in April. Yeah that one was rough, but otherwise it's been smooth. Any new features coming we should know about? Interesting, send me more on that, could be useful.",0.8735,0.3,positive,2026-07-20,False
+CALL-0020,internal,2026-07-27,25,Platform Team,['Tobias Krantz'],"Tobias Krantz: Let's lock sprint scope. Top priority is the export pagination fix, that's now a must-ship.
+Finn Walsh: I can take that, I already scoped it last week.
+Nikhil Rao: I'll take the API rate limit work we pushed from last sprint, plus a couple smaller bug fixes from the backlog.
+Tobias Krantz: Sounds good. Anything blocking either of you?
+Finn Walsh: Just need a staging dataset large enough to properly test the export fix, over a hundred thousand rows.
+Tobias Krantz: I'll get that set up today so it doesn't block you.",94,sprint_planning,0,Sprint Planning & Eng Backlog,roadmap/planning,"Tobias Krantz: Let's lock sprint scope. Top priority is the export pagination fix, that's now a must-ship.
+Finn Walsh: I can take that, I already scoped it last week.
+Nikhil Rao: I'll take the API rate limit work we pushed from last sprint, plus a couple smaller bug fixes from the backlog.
+Tobias Krantz: Sounds good. Anything blocking either of you?
+Finn Walsh: Just need a staging dataset large enough to properly test the export fix, over a hundred thousand rows.
+Tobias Krantz: I'll get that set up today so it doesn't block you.",0.5817,0.05,neutral,2026-07-27,False
+CALL-0021,support,2026-07-28,12,Ashford Realty Group,"['Ruth Fontaine', 'Chris Patel']","Chris Patel: Hi, it's Chris Patel -- got a few minutes?
+Ruth Fontaine: Of course, what's going on?
+Chris Patel: Can you confirm where customer data is physically stored? We have a new data residency requirement.
+Ruth Fontaine: Good question, let me get you the exact region info and loop in our compliance team if you need it in writing.
+Chris Patel: Alright, that's good to know. Anything you need from my side?
+Ruth Fontaine: Nope, I've got what I need. I'll send a summary email after this call.",89,security_compliance,5,Security & Compliance Documentation,security/compliance,"Hi, it's Chris Patel -- got a few minutes? Can you confirm where customer data is physically stored? We have a new data residency requirement. Alright, that's good to know. Anything you need from my side?",0.6641,0.0,neutral,2026-07-27,False
+CALL-0022,support,2026-07-28,9,Silverline Telecom,"['Liam Chen', 'Nadia Brooks']","Nadia Brooks: Hi, this is Nadia Brooks, calling about an issue we're seeing.
+Liam Chen: Of course, what's going on?
+Nadia Brooks: No issues to report, just checking in -- things have honestly been smooth this quarter.
+Liam Chen: Great to hear, always happy when a call is just good news.
+Nadia Brooks: Okay, that makes sense, thanks for explaining.
+Liam Chen: Nope, I've got what I need. I'll send a summary email after this call.",76,positive_checkin,9,Routine Support Resolution & Check-ins,positive checkin,"Hi, this is Nadia Brooks, calling about an issue we're seeing. No issues to report, just checking in -- things have honestly been smooth this quarter. Okay, that makes sense, thanks for explaining.",0.6808,1.0,positive,2026-07-27,False
+CALL-0023,external,2026-07-29,25,Castellan Insurance,"['Casey Lindqvist', 'Nadia Brooks']","Casey Lindqvist: Hi Nadia Brooks, thanks for making time -- wanted to talk through the renewal coming up next month.
+Nadia Brooks: Sure, happy to. Overall it's been a good year, usage has actually grown across a couple teams.
+Casey Lindqvist: That matches what I'm seeing on our end too -- adoption's up about thirty percent year over year for your org.
+Nadia Brooks: Yeah, the ops team basically lives in the tool now. I don't see any reason we wouldn't renew.
+Casey Lindqvist: Great to hear. Given the growth, would it make sense to talk about adding seats for the two newer teams?
+Nadia Brooks: Possibly, let me check budget on my end, but I'm open to the conversation.
+Casey Lindqvist: Perfect, I'll send over a proposal with a couple options and we can regroup next week.",138,renewal_healthy,4,Healthy Renewal & Expansion,account health/renewal,"Sure, happy to. Overall it's been a good year, usage has actually grown across a couple teams. Yeah, the ops team basically lives in the tool now. I don't see any reason we wouldn't renew. Possibly, let me check budget on my end, but I'm open to the conversation.",0.6757,0.8,positive,2026-07-27,False
+CALL-0024,internal,2026-07-29,10,Cross-team,['Tobias Krantz'],"Ruth Fontaine: I want to flag that the export bug has now come up in a renewal call, not just support tickets. It's a real risk for at least one account.
+Sofia Reyes: Got it, that changes the priority. Engineering already has it on the radar but I'll push to pull it forward.
+Ruth Fontaine: I'd appreciate that. I don't want to lose this account over something that's fixable.
+Sofia Reyes: Agreed, let me talk to the eng lead today and get you a real timeline by tomorrow.",88,cross_team_escalation_export,10,Mixed: Export Escalation Urgency + Staffing,export/reporting bug,"Ruth Fontaine: I want to flag that the export bug has now come up in a renewal call, not just support tickets. It's a real risk for at least one account.
+Sofia Reyes: Got it, that changes the priority. Engineering already has it on the radar but I'll push to pull it forward.
+Ruth Fontaine: I'd appreciate that. I don't want to lose this account over something that's fixable.
+Sofia Reyes: Agreed, let me talk to the eng lead today and get you a real timeline by tomorrow.",0.7734,-0.25,negative,2026-07-27,False
+CALL-0025,external,2026-07-29,18,Summit Manufacturing,"['Jordan Mills', 'Nadia Brooks']","Jordan Mills: Hi Nadia Brooks, wanted to check in ahead of the renewal -- how's everything feeling on your end?
+Nadia Brooks: Honestly, mixed. The product itself is fine but we've had real problems with the reporting export, more than once.
+Jordan Mills: I did see that come through on the support side. I'm sorry that's been a recurring headache.
+Nadia Brooks: It's more than a headache -- it's made my team nervous trusting the numbers we send up to leadership.
+Jordan Mills: That's completely fair, and I don't want to undersell how seriously we're taking it. I know engineering has it flagged as high priority.
+Nadia Brooks: I need to see it actually fixed before we commit to another year at this size. I can't keep explaining this to my VP.
+Jordan Mills: Understood. Let me get you a firm timeline directly from the engineering lead this week rather than another vague update, and let's hold the renewal conversation until that's resolved.
+Nadia Brooks: That works. I want to stay, I just need confidence it won't keep happening.",179,renewal_risk_export_bug,10,Mixed: Export Escalation Urgency + Staffing,export/reporting bug,"Honestly, mixed. The product itself is fine but we've had real problems with the reporting export, more than once. It's more than a headache -- it's made my team nervous trusting the numbers we send up to leadership. I need to see it actually fixed before we commit to another year at this size. I can't keep explaining this to my VP. That works. I want to stay, I just need confidence it won't keep happening.",0.8151,-0.8500000000000001,negative,2026-07-27,False
+CALL-0026,external,2026-07-30,20,Silverline Telecom,"['Teodora Ilic', 'Jules Ferreira']","Teodora Ilic: Hi Jules Ferreira, thanks for making time -- wanted to talk through the renewal coming up next month.
+Jules Ferreira: Sure, happy to. Overall it's been a good year, usage has actually grown across a couple teams.
+Teodora Ilic: That matches what I'm seeing on our end too -- adoption's up about thirty percent year over year for your org.
+Jules Ferreira: Yeah, the ops team basically lives in the tool now. I don't see any reason we wouldn't renew.
+Teodora Ilic: Great to hear. Given the growth, would it make sense to talk about adding seats for the two newer teams?
+Jules Ferreira: Possibly, let me check budget on my end, but I'm open to the conversation.
+Teodora Ilic: Perfect, I'll send over a proposal with a couple options and we can regroup next week.",138,renewal_healthy,4,Healthy Renewal & Expansion,account health/renewal,"Sure, happy to. Overall it's been a good year, usage has actually grown across a couple teams. Yeah, the ops team basically lives in the tool now. I don't see any reason we wouldn't renew. Possibly, let me check budget on my end, but I'm open to the conversation.",0.6757,0.8,positive,2026-07-27,False
+CALL-0027,external,2026-07-31,11,Clearwater Biotech,"['Jordan Mills', 'Taylor Grant']","Taylor Grant: Hey, I wanted to escalate something directly to you -- we're still waiting on the export bug fix.
+Jordan Mills: I know, I'm sorry it's dragged on this long. Let me get you a direct update from engineering today instead of routing through support again.
+Taylor Grant: I'd appreciate that. This has come up in three support calls now and nothing's changed.
+Jordan Mills: Understood, that's on us. I'll personally check with the eng lead and call you back today with a real date.
+Taylor Grant: Thank you, I just need to feel like this is being taken seriously at this point.",104,escalation_unresolved,3,Export/Reporting Bug -- Customer Impact,export/reporting bug,"Hey, I wanted to escalate something directly to you -- we're still waiting on the export bug fix. I'd appreciate that. This has come up in three support calls now and nothing's changed. Thank you, I just need to feel like this is being taken seriously at this point.",0.8271,-0.95,negative,2026-07-27,False
+CALL-0028,support,2026-07-31,18,Brightfield Health,"['Alexis Park', 'Chris Patel']","Chris Patel: Hi, this is Chris Patel, calling about an issue we're seeing.
+Alexis Park: Of course, what's going on?
+Chris Patel: I can't figure out how to set up a custom field that only certain roles can see.
+Alexis Park: Sure, that's under Settings > Custom Fields > Visibility -- let me walk you through it.
+Chris Patel: Alright, that's good to know. Anything you need from my side?
+Alexis Park: Nope, I've got what I need. I'll send a summary email after this call.",86,how_to,11,Login/SSO & General Support Resolution,how-to/training,"Hi, this is Chris Patel, calling about an issue we're seeing. I can't figure out how to set up a custom field that only certain roles can see. Alright, that's good to know. Anything you need from my side?",0.7184,0.15,neutral,2026-07-27,False
+CALL-0029,external,2026-08-01,13,Summit Manufacturing,"['Priya Anand', 'Nadia Brooks']","Nadia Brooks: Hey, I wanted to escalate something directly to you -- we're still waiting on the export bug fix.
+Priya Anand: I know, I'm sorry it's dragged on this long. Let me get you a direct update from engineering today instead of routing through support again.
+Nadia Brooks: I'd appreciate that. This has come up in three support calls now and nothing's changed.
+Priya Anand: Understood, that's on us. I'll personally check with the eng lead and call you back today with a real date.
+Nadia Brooks: Thank you, I just need to feel like this is being taken seriously at this point.",104,escalation_unresolved,3,Export/Reporting Bug -- Customer Impact,export/reporting bug,"Hey, I wanted to escalate something directly to you -- we're still waiting on the export bug fix. I'd appreciate that. This has come up in three support calls now and nothing's changed. Thank you, I just need to feel like this is being taken seriously at this point.",0.8271,-0.95,negative,2026-07-27,False
+CALL-0030,internal,2026-08-02,15,Platform Team,['Sofia Reyes'],"Sofia Reyes: We've had a few customers ask for updated SOC 2 documentation and data residency details this quarter.
+Yuki Tanaka: That's been coming up more as we land larger enterprise accounts, makes sense.
+Sofia Reyes: Let's make sure the compliance packet is easy for account teams to hand out without looping in engineering every time.
+Yuki Tanaka: Agreed, I can help put together a self-serve doc with the common things that get asked.",74,security_review,5,Security & Compliance Documentation,security/compliance,"Sofia Reyes: We've had a few customers ask for updated SOC 2 documentation and data residency details this quarter.
+Yuki Tanaka: That's been coming up more as we land larger enterprise accounts, makes sense.
+Sofia Reyes: Let's make sure the compliance packet is easy for account teams to hand out without looping in engineering every time.
+Yuki Tanaka: Agreed, I can help put together a self-serve doc with the common things that get asked.",0.9042,0.0,neutral,2026-07-27,False
+CALL-0031,internal,2026-08-04,18,Cross-functional,"['Devon Pratt', 'Casey Lindqvist']","Devon Pratt: Let's review accounts flagged as at-risk this month.
+Priya Anand: Two stand out -- one is evaluating Lumina Analytics on pricing, the other is blocked on the export bug and won't commit to renewal until it's fixed.
+Sofia Reyes: The export fix is already prioritized for this sprint, so that one should resolve itself if we ship on time.
+Devon Pratt: Good. For the pricing-driven one, I think Smart Alerts plus a pricing conversation is probably our best retention play.
+Priya Anand: Agreed, I'll loop in the account exec on pricing flexibility this week.",96,churn_risk_review,8,Churn Risk Review & Retention Strategy,account health/renewal,"Devon Pratt: Let's review accounts flagged as at-risk this month.
+Priya Anand: Two stand out -- one is evaluating Lumina Analytics on pricing, the other is blocked on the export bug and won't commit to renewal until it's fixed.
+Sofia Reyes: The export fix is already prioritized for this sprint, so that one should resolve itself if we ship on time.
+Devon Pratt: Good. For the pricing-driven one, I think Smart Alerts plus a pricing conversation is probably our best retention play.
+Priya Anand: Agreed, I'll loop in the account exec on pricing flexibility this week.",0.9362,-0.7,negative,2026-08-03,True
+CALL-0032,external,2026-08-04,24,Ashford Realty Group,"['Casey Lindqvist', 'Elena Vasquez']","Casey Lindqvist: Hi Elena Vasquez, wanted to check in ahead of the renewal -- how's everything feeling on your end?
+Elena Vasquez: Honestly, mixed. The product itself is fine but we've had real problems with the reporting export, more than once.
+Casey Lindqvist: I did see that come through on the support side. I'm sorry that's been a recurring headache.
+Elena Vasquez: It's more than a headache -- it's made my team nervous trusting the numbers we send up to leadership.
+Casey Lindqvist: That's completely fair, and I don't want to undersell how seriously we're taking it. I know engineering has it flagged as high priority.
+Elena Vasquez: I need to see it actually fixed before we commit to another year at this size. I can't keep explaining this to my VP.
+Casey Lindqvist: Understood. Let me get you a firm timeline directly from the engineering lead this week rather than another vague update, and let's hold the renewal conversation until that's resolved.
+Elena Vasquez: That works. I want to stay, I just need confidence it won't keep happening.",179,renewal_risk_export_bug,10,Mixed: Export Escalation Urgency + Staffing,export/reporting bug,"Honestly, mixed. The product itself is fine but we've had real problems with the reporting export, more than once. It's more than a headache -- it's made my team nervous trusting the numbers we send up to leadership. I need to see it actually fixed before we commit to another year at this size. I can't keep explaining this to my VP. That works. I want to stay, I just need confidence it won't keep happening.",0.8151,-0.8500000000000001,negative,2026-08-03,False
+CALL-0033,external,2026-08-05,23,Vantage Retail Group,"['Priya Anand', 'Morgan Reyes']","Priya Anand: Hey Morgan Reyes, how are things going ahead of the renewal discussion?
+Morgan Reyes: I'll be honest with you -- we've been evaluating Lumina Analytics as an alternative.
+Priya Anand: I appreciate you telling me directly. Can I ask what's driving that?
+Morgan Reyes: Mostly pricing, their quote came in meaningfully lower, and their new dashboards look pretty slick in the demo.
+Priya Anand: That's useful to know. We've actually just shipped some new alerting and reporting capability that might close some of that gap -- can I show you before you decide anything?
+Morgan Reyes: Sure, I'm not set on switching, it's early. But the price difference is real and I'll need a good reason to justify staying.
+Priya Anand: Fair enough, let me put together a comparison and see what we can do on pricing too. I'd rather have that conversation than lose you to a feature gap we've already closed.",155,renewal_risk_competitor,1,Competitive Threat (Pricing/Capability Gap),competitive threat,"I'll be honest with you -- we've been evaluating Lumina Analytics as an alternative. Mostly pricing, their quote came in meaningfully lower, and their new dashboards look pretty slick in the demo. Sure, I'm not set on switching, it's early. But the price difference is real and I'll need a good reason to justify staying.",0.7992,-0.35,negative,2026-08-03,True
+CALL-0034,internal,2026-08-05,20,Platform Team,['Sofia Reyes'],"Sofia Reyes: Let's go through the postmortem for last week's regional slowdown.
+Yuki Tanaka: Root cause was a database connection pool exhaustion during a traffic spike from one large customer's batch job.
+Nikhil Rao: We didn't have alerting on pool saturation specifically, only on overall latency, so we caught it later than we should have.
+Sofia Reyes: How long was the customer-visible impact?
+Yuki Tanaka: About forty minutes of degraded performance, no full outage, but several customers noticed and a few filed support tickets.
+Sofia Reyes: Okay, action items: add pool saturation alerting, and let's look at rate-limiting batch jobs from a single tenant.
+Nikhil Rao: I'll own the alerting piece, should be done by end of week.",118,incident_postmortem,7,Incident Postmortem (Infra/Performance),incident/postmortem,"Sofia Reyes: Let's go through the postmortem for last week's regional slowdown.
+Yuki Tanaka: Root cause was a database connection pool exhaustion during a traffic spike from one large customer's batch job.
+Nikhil Rao: We didn't have alerting on pool saturation specifically, only on overall latency, so we caught it later than we should have.
+Sofia Reyes: How long was the customer-visible impact?
+Yuki Tanaka: About forty minutes of degraded performance, no full outage, but several customers noticed and a few filed support tickets.
+Sofia Reyes: Okay, action items: add pool saturation alerting, and let's look at rate-limiting batch jobs from a single tenant.
+Nikhil Rao: I'll own the alerting piece, should be done by end of week.",0.3919,-0.15,negative,2026-08-03,False
+CALL-0035,internal,2026-08-06,20,Cross-functional,['Devon Pratt'],"Priya Anand: A few accounts have mentioned Lumina Analytics in renewal conversations recently, mostly on pricing.
+Wes Carrington: That's useful, do we know what specifically they're pitching?
+Priya Anand: Lower price point and a slicker-looking dashboard UI from what customers describe, functionality seems comparable overall.
+Sofia Reyes: Smart Alerts might help close some of that gap since it's a newer capability they may not have yet.
+Wes Carrington: Agreed, let's get a competitive one-pager together for the account team so they're not caught off guard in these calls.
+Priya Anand: That would help a lot, right now everyone's answering these questions a little differently.",104,competitive_strategy,1,Competitive Threat (Pricing/Capability Gap),competitive threat,"Priya Anand: A few accounts have mentioned Lumina Analytics in renewal conversations recently, mostly on pricing.
+Wes Carrington: That's useful, do we know what specifically they're pitching?
+Priya Anand: Lower price point and a slicker-looking dashboard UI from what customers describe, functionality seems comparable overall.
+Sofia Reyes: Smart Alerts might help close some of that gap since it's a newer capability they may not have yet.
+Wes Carrington: Agreed, let's get a competitive one-pager together for the account team so they're not caught off guard in these calls.
+Priya Anand: That would help a lot, right now everyone's answering these questions a little differently.",0.891,-0.1,neutral,2026-08-03,True
+CALL-0036,external,2026-08-06,20,Silverline Telecom,"['Casey Lindqvist', 'Robin Haas']","Casey Lindqvist: Hi Robin Haas, thanks for hopping on, what's on your mind today?
+Robin Haas: Our team has been asking for a way to customize the dashboard layout per role, is that on the roadmap?
+Casey Lindqvist: That's come up from a couple other accounts too, let me check with product and see where it sits on the roadmap.
+Robin Haas: Sounds good, appreciate you looking into it.
+Casey Lindqvist: Of course, I'll follow up with next steps by end of week.",83,feature_request,9,Routine Support Resolution & Check-ins,feature request,"Our team has been asking for a way to customize the dashboard layout per role, is that on the roadmap? Sounds good, appreciate you looking into it.",0.6808,0.15,neutral,2026-08-03,False
+CALL-0037,internal,2026-08-06,20,Platform Team,['Sofia Reyes'],"Sofia Reyes: Let's go through the postmortem for last week's regional slowdown.
+Sam Doyle: Root cause was a database connection pool exhaustion during a traffic spike from one large customer's batch job.
+Finn Walsh: We didn't have alerting on pool saturation specifically, only on overall latency, so we caught it later than we should have.
+Sofia Reyes: How long was the customer-visible impact?
+Sam Doyle: About forty minutes of degraded performance, no full outage, but several customers noticed and a few filed support tickets.
+Sofia Reyes: Okay, action items: add pool saturation alerting, and let's look at rate-limiting batch jobs from a single tenant.
+Finn Walsh: I'll own the alerting piece, should be done by end of week.",118,incident_postmortem,7,Incident Postmortem (Infra/Performance),incident/postmortem,"Sofia Reyes: Let's go through the postmortem for last week's regional slowdown.
+Sam Doyle: Root cause was a database connection pool exhaustion during a traffic spike from one large customer's batch job.
+Finn Walsh: We didn't have alerting on pool saturation specifically, only on overall latency, so we caught it later than we should have.
+Sofia Reyes: How long was the customer-visible impact?
+Sam Doyle: About forty minutes of degraded performance, no full outage, but several customers noticed and a few filed support tickets.
+Sofia Reyes: Okay, action items: add pool saturation alerting, and let's look at rate-limiting batch jobs from a single tenant.
+Finn Walsh: I'll own the alerting piece, should be done by end of week.",0.3919,-0.15,negative,2026-08-03,False
+CALL-0038,internal,2026-08-07,20,Cross-functional,['Mina Oyelaran'],"Priya Anand: A few accounts have mentioned Lumina Analytics in renewal conversations recently, mostly on pricing.
+Wes Carrington: That's useful, do we know what specifically they're pitching?
+Priya Anand: Lower price point and a slicker-looking dashboard UI from what customers describe, functionality seems comparable overall.
+Sofia Reyes: Smart Alerts might help close some of that gap since it's a newer capability they may not have yet.
+Wes Carrington: Agreed, let's get a competitive one-pager together for the account team so they're not caught off guard in these calls.
+Priya Anand: That would help a lot, right now everyone's answering these questions a little differently.",104,competitive_strategy,1,Competitive Threat (Pricing/Capability Gap),competitive threat,"Priya Anand: A few accounts have mentioned Lumina Analytics in renewal conversations recently, mostly on pricing.
+Wes Carrington: That's useful, do we know what specifically they're pitching?
+Priya Anand: Lower price point and a slicker-looking dashboard UI from what customers describe, functionality seems comparable overall.
+Sofia Reyes: Smart Alerts might help close some of that gap since it's a newer capability they may not have yet.
+Wes Carrington: Agreed, let's get a competitive one-pager together for the account team so they're not caught off guard in these calls.
+Priya Anand: That would help a lot, right now everyone's answering these questions a little differently.",0.891,-0.1,neutral,2026-08-03,True
+CALL-0039,external,2026-08-08,15,Union Square Media,"['Marcus Webb', 'Chris Patel']","Marcus Webb: Hi Chris Patel, thanks for hopping on, what's on your mind today?
+Chris Patel: Would it be possible to get native Slack notifications instead of just email?
+Marcus Webb: I like that idea, let me bring it to the product team as a formal request and see if we can get visibility into timing.
+Chris Patel: Sounds good, appreciate you looking into it.
+Marcus Webb: Of course, I'll follow up with next steps by end of week.",79,feature_request,2,"Smart Alerts Launch, Upsell & QBR",feature request,"Would it be possible to get native Slack notifications instead of just email? Sounds good, appreciate you looking into it.",0.6808,0.15,neutral,2026-08-03,False
+CALL-0040,external,2026-08-09,17,Northwind Logistics,"['Casey Lindqvist', 'Morgan Reyes']","Casey Lindqvist: Hi Morgan Reyes, thanks for making time -- wanted to talk through the renewal coming up next month.
+Morgan Reyes: Sure, happy to. Overall it's been a good year, usage has actually grown across a couple teams.
+Casey Lindqvist: That matches what I'm seeing on our end too -- adoption's up about thirty percent year over year for your org.
+Morgan Reyes: Yeah, the ops team basically lives in the tool now. I don't see any reason we wouldn't renew.
+Casey Lindqvist: Great to hear. Given the growth, would it make sense to talk about adding seats for the two newer teams?
+Morgan Reyes: Possibly, let me check budget on my end, but I'm open to the conversation.
+Casey Lindqvist: Perfect, I'll send over a proposal with a couple options and we can regroup next week.",138,renewal_healthy,4,Healthy Renewal & Expansion,account health/renewal,"Sure, happy to. Overall it's been a good year, usage has actually grown across a couple teams. Yeah, the ops team basically lives in the tool now. I don't see any reason we wouldn't renew. Possibly, let me check budget on my end, but I'm open to the conversation.",0.6757,0.8,positive,2026-08-03,False
+CALL-0041,internal,2026-08-09,20,Cross-functional,['Mina Oyelaran'],"Jordan Mills: A few accounts have mentioned Lumina Analytics in renewal conversations recently, mostly on pricing.
+Devon Pratt: That's useful, do we know what specifically they're pitching?
+Jordan Mills: Lower price point and a slicker-looking dashboard UI from what customers describe, functionality seems comparable overall.
+Sofia Reyes: Smart Alerts might help close some of that gap since it's a newer capability they may not have yet.
+Devon Pratt: Agreed, let's get a competitive one-pager together for the account team so they're not caught off guard in these calls.
+Jordan Mills: That would help a lot, right now everyone's answering these questions a little differently.",104,competitive_strategy,1,Competitive Threat (Pricing/Capability Gap),competitive threat,"Jordan Mills: A few accounts have mentioned Lumina Analytics in renewal conversations recently, mostly on pricing.
+Devon Pratt: That's useful, do we know what specifically they're pitching?
+Jordan Mills: Lower price point and a slicker-looking dashboard UI from what customers describe, functionality seems comparable overall.
+Sofia Reyes: Smart Alerts might help close some of that gap since it's a newer capability they may not have yet.
+Devon Pratt: Agreed, let's get a competitive one-pager together for the account team so they're not caught off guard in these calls.
+Jordan Mills: That would help a lot, right now everyone's answering these questions a little differently.",0.891,-0.1,neutral,2026-08-03,True
+CALL-0042,internal,2026-08-10,12,Platform Team,"['Sofia Reyes', 'Nikhil Rao']","Finn Walsh: Good news -- the export fix is live as of this morning, removed the row cap and switched to cursor-based pagination.
+Sofia Reyes: That's great. Any regressions in testing?
+Sam Doyle: Tested up to half a million rows without issues, and added monitoring so we'd catch silent truncation earlier next time.
+Sofia Reyes: Good call on the monitoring. Let's get support and the account team notified so they can close the loop with affected customers.
+Finn Walsh: Already pinged the support lead, they're going to proactively reach out to the accounts that complained.",95,bug_triage_export_shipped,3,Export/Reporting Bug -- Customer Impact,export/reporting bug,"Finn Walsh: Good news -- the export fix is live as of this morning, removed the row cap and switched to cursor-based pagination.
+Sofia Reyes: That's great. Any regressions in testing?
+Sam Doyle: Tested up to half a million rows without issues, and added monitoring so we'd catch silent truncation earlier next time.
+Sofia Reyes: Good call on the monitoring. Let's get support and the account team notified so they can close the loop with affected customers.
+Finn Walsh: Already pinged the support lead, they're going to proactively reach out to the accounts that complained.",0.9022,0.7000000000000001,positive,2026-08-10,False
+CALL-0043,support,2026-08-10,15,Clearwater Biotech,"['Ruth Fontaine', 'Chris Patel']","Chris Patel: Hey, Chris Patel here, hoping you can help with something.
+Ruth Fontaine: Of course, what's going on?
+Chris Patel: Just wanted to say the new dashboard update has been great, the team's actually using it daily now.
+Ruth Fontaine: That's wonderful to hear, I'll pass that along to the product team, they'll be glad to know it's landing well.
+Chris Patel: Got it, appreciate the quick turnaround on this.
+Ruth Fontaine: Not at the moment, I'll follow up once this is fully resolved on our end.",88,positive_checkin,9,Routine Support Resolution & Check-ins,positive checkin,"Hey, Chris Patel here, hoping you can help with something. Just wanted to say the new dashboard update has been great, the team's actually using it daily now. Got it, appreciate the quick turnaround on this.",0.9062,0.7,positive,2026-08-10,False
+CALL-0044,internal,2026-08-11,15,Platform Team,"['Tobias Krantz', 'Mina Oyelaran']","Tobias Krantz: We need to talk about headcount for the platform team, we're stretched thin with the export rework plus normal roadmap work.
+Mina Oyelaran: Agreed, I think we've been underinvesting in the data pipeline side generally, it's not just this one bug.
+Tobias Krantz: I want to open a req for a senior backend engineer focused on the export and reporting pipeline specifically.
+Mina Oyelaran: Makes sense, I'll support that in planning. Can you have a job description draft by next week?
+Tobias Krantz: Yes, I'll have it ready for review by Wednesday.",94,hiring_discussion,10,Mixed: Export Escalation Urgency + Staffing,hiring/staffing,"Tobias Krantz: We need to talk about headcount for the platform team, we're stretched thin with the export rework plus normal roadmap work.
+Mina Oyelaran: Agreed, I think we've been underinvesting in the data pipeline side generally, it's not just this one bug.
+Tobias Krantz: I want to open a req for a senior backend engineer focused on the export and reporting pipeline specifically.
+Mina Oyelaran: Makes sense, I'll support that in planning. Can you have a job description draft by next week?
+Tobias Krantz: Yes, I'll have it ready for review by Wednesday.",0.8979,-0.2,negative,2026-08-10,False
+CALL-0045,external,2026-08-11,11,Alderman Consulting,"['Teodora Ilic', 'Nadia Brooks']","Teodora Ilic: Hi Nadia Brooks, thanks for hopping on, what's on your mind today?
+Nadia Brooks: We've had such a good experience, would you be open to us doing a case study together?
+Teodora Ilic: Absolutely, I'd love that, let me connect you with our customer marketing team to scope it out.
+Nadia Brooks: Sounds good, appreciate you looking into it.
+Teodora Ilic: Of course, I'll follow up with next steps by end of week.",75,reference_request,12,Reference Requests & Contract Follow-ups,reference/case study,"We've had such a good experience, would you be open to us doing a case study together? Sounds good, appreciate you looking into it.",0.8176,0.55,positive,2026-08-10,False
+CALL-0046,external,2026-08-12,21,Trestle Robotics,"['Casey Lindqvist', 'Chris Patel']","Casey Lindqvist: Hi Chris Patel, wanted to check in ahead of the renewal -- how's everything feeling on your end?
+Chris Patel: Honestly, mixed. The product itself is fine but we've had real problems with the reporting export, more than once.
+Casey Lindqvist: I did see that come through on the support side. I'm sorry that's been a recurring headache.
+Chris Patel: It's more than a headache -- it's made my team nervous trusting the numbers we send up to leadership.
+Casey Lindqvist: That's completely fair, and I don't want to undersell how seriously we're taking it. I know engineering has it flagged as high priority.
+Chris Patel: I need to see it actually fixed before we commit to another year at this size. I can't keep explaining this to my VP.
+Casey Lindqvist: Understood. Let me get you a firm timeline directly from the engineering lead this week rather than another vague update, and let's hold the renewal conversation until that's resolved.
+Chris Patel: That works. I want to stay, I just need confidence it won't keep happening.",179,renewal_risk_export_bug,10,Mixed: Export Escalation Urgency + Staffing,export/reporting bug,"Honestly, mixed. The product itself is fine but we've had real problems with the reporting export, more than once. It's more than a headache -- it's made my team nervous trusting the numbers we send up to leadership. I need to see it actually fixed before we commit to another year at this size. I can't keep explaining this to my VP. That works. I want to stay, I just need confidence it won't keep happening.",0.8151,-0.8500000000000001,negative,2026-08-10,False
+CALL-0047,internal,2026-08-12,18,Cross-functional,"['Devon Pratt', 'Jordan Mills']","Devon Pratt: Let's review accounts flagged as at-risk this month.
+Teodora Ilic: Two stand out -- one is evaluating Lumina Analytics on pricing, the other is blocked on the export bug and won't commit to renewal until it's fixed.
+Sofia Reyes: The export fix is already prioritized for this sprint, so that one should resolve itself if we ship on time.
+Devon Pratt: Good. For the pricing-driven one, I think Smart Alerts plus a pricing conversation is probably our best retention play.
+Teodora Ilic: Agreed, I'll loop in the account exec on pricing flexibility this week.",96,churn_risk_review,8,Churn Risk Review & Retention Strategy,account health/renewal,"Devon Pratt: Let's review accounts flagged as at-risk this month.
+Teodora Ilic: Two stand out -- one is evaluating Lumina Analytics on pricing, the other is blocked on the export bug and won't commit to renewal until it's fixed.
+Sofia Reyes: The export fix is already prioritized for this sprint, so that one should resolve itself if we ship on time.
+Devon Pratt: Good. For the pricing-driven one, I think Smart Alerts plus a pricing conversation is probably our best retention play.
+Teodora Ilic: Agreed, I'll loop in the account exec on pricing flexibility this week.",0.9362,-0.7,negative,2026-08-10,True
+CALL-0048,support,2026-08-12,13,Castellan Insurance,"['Liam Chen', 'Owen Castellan']","Owen Castellan: Hi, it's Owen Castellan -- got a few minutes?
+Liam Chen: Of course, what's going on?
+Owen Castellan: We were charged for the Enterprise tier but I thought we downgraded to Pro back in May?
+Liam Chen: I see the downgrade request but it looks like it never got processed on our end -- I'm sorry about that. I'll backdate the correction and refund the difference.
+Owen Castellan: Got it, appreciate the quick turnaround on this.
+Liam Chen: Not at the moment, I'll follow up once this is fully resolved on our end.",95,billing,10,Mixed: Export Escalation Urgency + Staffing,billing,"Hi, it's Owen Castellan -- got a few minutes? We were charged for the Enterprise tier but I thought we downgraded to Pro back in May? Got it, appreciate the quick turnaround on this.",0.5439,-0.3,negative,2026-08-10,False
+CALL-0049,internal,2026-08-13,15,Platform Team,"['Sofia Reyes', 'Devon Pratt']","Sofia Reyes: We need to talk about headcount for the platform team, we're stretched thin with the export rework plus normal roadmap work.
+Mina Oyelaran: Agreed, I think we've been underinvesting in the data pipeline side generally, it's not just this one bug.
+Sofia Reyes: I want to open a req for a senior backend engineer focused on the export and reporting pipeline specifically.
+Mina Oyelaran: Makes sense, I'll support that in planning. Can you have a job description draft by next week?
+Sofia Reyes: Yes, I'll have it ready for review by Wednesday.",94,hiring_discussion,10,Mixed: Export Escalation Urgency + Staffing,hiring/staffing,"Sofia Reyes: We need to talk about headcount for the platform team, we're stretched thin with the export rework plus normal roadmap work.
+Mina Oyelaran: Agreed, I think we've been underinvesting in the data pipeline side generally, it's not just this one bug.
+Sofia Reyes: I want to open a req for a senior backend engineer focused on the export and reporting pipeline specifically.
+Mina Oyelaran: Makes sense, I'll support that in planning. Can you have a job description draft by next week?
+Sofia Reyes: Yes, I'll have it ready for review by Wednesday.",0.8979,-0.2,negative,2026-08-10,False
+CALL-0050,external,2026-08-14,16,Fenwick & Co,"['Jordan Mills', 'Nadia Brooks']","Jordan Mills: Hi Nadia Brooks, thanks for making time -- wanted to talk through the renewal coming up next month.
+Nadia Brooks: Sure, happy to. Overall it's been a good year, usage has actually grown across a couple teams.
+Jordan Mills: That matches what I'm seeing on our end too -- adoption's up about thirty percent year over year for your org.
+Nadia Brooks: Yeah, the ops team basically lives in the tool now. I don't see any reason we wouldn't renew.
+Jordan Mills: Great to hear. Given the growth, would it make sense to talk about adding seats for the two newer teams?
+Nadia Brooks: Possibly, let me check budget on my end, but I'm open to the conversation.
+Jordan Mills: Perfect, I'll send over a proposal with a couple options and we can regroup next week.",138,renewal_healthy,4,Healthy Renewal & Expansion,account health/renewal,"Sure, happy to. Overall it's been a good year, usage has actually grown across a couple teams. Yeah, the ops team basically lives in the tool now. I don't see any reason we wouldn't renew. Possibly, let me check budget on my end, but I'm open to the conversation.",0.6757,0.8,positive,2026-08-10,False
+CALL-0051,support,2026-08-15,15,Westbrook Logistics,"['Omar Siddiqui', 'Jules Ferreira']","Jules Ferreira: Hi, this is Jules Ferreira, calling about an issue we're seeing.
+Omar Siddiqui: Of course, what's going on?
+Jules Ferreira: We need to understand your data retention policy for a GDPR audit we're going through.
+Omar Siddiqui: Happy to help, I'll send our data retention documentation and set up a call with our privacy team if needed.
+Jules Ferreira: Alright, that's good to know. Anything you need from my side?
+Omar Siddiqui: All good, I'll keep you posted if anything changes.",83,security_compliance,8,Churn Risk Review & Retention Strategy,security/compliance,"Hi, this is Jules Ferreira, calling about an issue we're seeing. We need to understand your data retention policy for a GDPR audit we're going through. Alright, that's good to know. Anything you need from my side?",0.5994,-0.15,negative,2026-08-10,False
+CALL-0052,support,2026-08-16,5,Pinecrest Education,"['Omar Siddiqui', 'Chris Patel']","Chris Patel: Hey, Chris Patel here. Just ran the export we talked about last week.
+Omar Siddiqui: Oh good, how did it go?
+Chris Patel: The export came through complete this time, all rows, no issues. That's a relief honestly.
+Chris Patel: Our finance team is pretty happy, we were starting to lose confidence in the numbers.
+Omar Siddiqui: Glad it's working! Engineering shipped the fix last Thursday -- it removes the old row cap entirely.
+Chris Patel: Appreciate the team staying on it. Please pass along the thanks.",89,export_bug_resolved,3,Export/Reporting Bug -- Customer Impact,export/reporting bug,"Hey, Chris Patel here. Just ran the export we talked about last week. The export came through complete this time, all rows, no issues. That's a relief honestly. Our finance team is pretty happy, we were starting to lose confidence in the numbers. Appreciate the team staying on it. Please pass along the thanks.",0.9601,0.9,positive,2026-08-10,False
+CALL-0053,internal,2026-08-17,15,Platform Team,['Sofia Reyes'],"Sofia Reyes: We've had a few customers ask for updated SOC 2 documentation and data residency details this quarter.
+Beatriz Souza: That's been coming up more as we land larger enterprise accounts, makes sense.
+Sofia Reyes: Let's make sure the compliance packet is easy for account teams to hand out without looping in engineering every time.
+Beatriz Souza: Agreed, I can help put together a self-serve doc with the common things that get asked.",74,security_review,5,Security & Compliance Documentation,security/compliance,"Sofia Reyes: We've had a few customers ask for updated SOC 2 documentation and data residency details this quarter.
+Beatriz Souza: That's been coming up more as we land larger enterprise accounts, makes sense.
+Sofia Reyes: Let's make sure the compliance packet is easy for account teams to hand out without looping in engineering every time.
+Beatriz Souza: Agreed, I can help put together a self-serve doc with the common things that get asked.",0.9042,0.0,neutral,2026-08-17,False
+CALL-0054,support,2026-08-17,8,Ashford Realty Group,"['Ruth Fontaine', 'Owen Castellan']","Owen Castellan: Hey, Owen Castellan here. Just ran the export we talked about last week.
+Ruth Fontaine: Oh good, how did it go?
+Owen Castellan: The export came through complete this time, all rows, no issues. That's a relief honestly.
+Owen Castellan: Good timing too, we had a report due to leadership this week.
+Ruth Fontaine: That's great to hear! The fix shipped last week, it raised the export row limit and added proper pagination so large files won't get cut off anymore.
+Owen Castellan: Appreciate the team staying on it. Please pass along the thanks.",96,export_bug_resolved,3,Export/Reporting Bug -- Customer Impact,export/reporting bug,"Hey, Owen Castellan here. Just ran the export we talked about last week. The export came through complete this time, all rows, no issues. That's a relief honestly. Good timing too, we had a report due to leadership this week. Appreciate the team staying on it. Please pass along the thanks.",0.9287,0.75,positive,2026-08-17,False
+CALL-0055,external,2026-08-18,23,Brightfield Health,"['Teodora Ilic', 'Sam Oduya']","Teodora Ilic: Hey Sam Oduya, how are things going ahead of the renewal discussion?
+Sam Oduya: I'll be honest with you -- we've been evaluating Lumina Analytics as an alternative.
+Teodora Ilic: I appreciate you telling me directly. Can I ask what's driving that?
+Sam Oduya: Mostly pricing, their quote came in meaningfully lower, and their new dashboards look pretty slick in the demo.
+Teodora Ilic: That's useful to know. We've actually just shipped some new alerting and reporting capability that might close some of that gap -- can I show you before you decide anything?
+Sam Oduya: Sure, I'm not set on switching, it's early. But the price difference is real and I'll need a good reason to justify staying.
+Teodora Ilic: Fair enough, let me put together a comparison and see what we can do on pricing too. I'd rather have that conversation than lose you to a feature gap we've already closed.",155,renewal_risk_competitor,1,Competitive Threat (Pricing/Capability Gap),competitive threat,"I'll be honest with you -- we've been evaluating Lumina Analytics as an alternative. Mostly pricing, their quote came in meaningfully lower, and their new dashboards look pretty slick in the demo. Sure, I'm not set on switching, it's early. But the price difference is real and I'll need a good reason to justify staying.",0.7992,-0.35,negative,2026-08-17,True
+CALL-0056,external,2026-08-19,30,Westbrook Logistics,"['Casey Lindqvist', 'Morgan Reyes']","Casey Lindqvist: Thanks for joining the QBR, Morgan Reyes. Let's walk through the last quarter.
+Morgan Reyes: Sounds good, go ahead.
+Casey Lindqvist: Usage is up, active users grew from about 80 to 110, and your team's running roughly 40% more reports than last quarter.
+Morgan Reyes: That tracks, we rolled it out to the regional ops teams in April.
+Casey Lindqvist: On the support side, you had six tickets this quarter, mostly resolved within a day except the export issue which took longer.
+Morgan Reyes: Yeah that one was rough, but otherwise it's been smooth. Any new features coming we should know about?
+Casey Lindqvist: Yes, actually -- we just launched Smart Alerts, it might be relevant for your ops team's monitoring use case.
+Morgan Reyes: Interesting, send me more on that, could be useful.",136,qbr,2,"Smart Alerts Launch, Upsell & QBR",account health/renewal,"Sounds good, go ahead. That tracks, we rolled it out to the regional ops teams in April. Yeah that one was rough, but otherwise it's been smooth. Any new features coming we should know about? Interesting, send me more on that, could be useful.",0.8735,0.3,positive,2026-08-17,False
+CALL-0057,support,2026-08-21,9,Brightfield Health,"['Omar Siddiqui', 'Elena Vasquez']","Elena Vasquez: Hey, Elena Vasquez here, hoping you can help with something.
+Omar Siddiqui: Of course, what's going on?
+Elena Vasquez: Our Salesforce sync stopped pulling new leads sometime yesterday, nothing's come through since.
+Omar Siddiqui: Let's check the integration logs -- it might be an expired OAuth token on the Salesforce side.
+Elena Vasquez: Got it, appreciate the quick turnaround on this.
+Omar Siddiqui: Nope, I've got what I need. I'll send a summary email after this call.",79,integration_api,11,Login/SSO & General Support Resolution,integration/api,"Hey, Elena Vasquez here, hoping you can help with something. Our Salesforce sync stopped pulling new leads sometime yesterday, nothing's come through since. Got it, appreciate the quick turnaround on this.",0.743,-0.55,negative,2026-08-17,False
+CALL-0058,external,2026-08-22,15,Summit Manufacturing,"['Priya Anand', 'Jules Ferreira']","Priya Anand: Hey Jules Ferreira, how are things going ahead of the renewal discussion?
+Jules Ferreira: I'll be honest with you -- we've been evaluating Lumina Analytics as an alternative.
+Priya Anand: I appreciate you telling me directly. Can I ask what's driving that?
+Jules Ferreira: Mostly pricing, their quote came in meaningfully lower, and their new dashboards look pretty slick in the demo.
+Priya Anand: That's useful to know. We've actually just shipped some new alerting and reporting capability that might close some of that gap -- can I show you before you decide anything?
+Jules Ferreira: Sure, I'm not set on switching, it's early. But the price difference is real and I'll need a good reason to justify staying.
+Priya Anand: Fair enough, let me put together a comparison and see what we can do on pricing too. I'd rather have that conversation than lose you to a feature gap we've already closed.",155,renewal_risk_competitor,1,Competitive Threat (Pricing/Capability Gap),competitive threat,"I'll be honest with you -- we've been evaluating Lumina Analytics as an alternative. Mostly pricing, their quote came in meaningfully lower, and their new dashboards look pretty slick in the demo. Sure, I'm not set on switching, it's early. But the price difference is real and I'll need a good reason to justify staying.",0.7992,-0.35,negative,2026-08-17,True
+CALL-0059,support,2026-08-23,7,Granite Peak Manufacturing,"['Dana Okafor', 'Morgan Reyes']","Morgan Reyes: Hi Dana Okafor, it's Morgan Reyes from Granite Peak Manufacturing again. Wanted to follow up on the export issue.
+Dana Okafor: Oh good, how did it go?
+Morgan Reyes: I just want to say -- it worked. We exported about ninety thousand rows and got the full file, no truncation.
+Morgan Reyes: Our finance team is pretty happy, we were starting to lose confidence in the numbers.
+Dana Okafor: Glad it's working! Engineering shipped the fix last Thursday -- it removes the old row cap entirely.
+Morgan Reyes: Appreciate the team staying on it. Please pass along the thanks.",101,export_bug_resolved,3,Export/Reporting Bug -- Customer Impact,export/reporting bug,"Hi Dana Okafor, it's Morgan Reyes from Granite Peak Manufacturing again. Wanted to follow up on the export issue. I just want to say -- it worked. We exported about ninety thousand rows and got the full file, no truncation. Our finance team is pretty happy, we were starting to lose confidence in the numbers. Appreciate the team staying on it. Please pass along the thanks.",0.926,0.75,positive,2026-08-17,False
+CALL-0060,internal,2026-08-23,25,Platform Team,['Tobias Krantz'],"Sofia Reyes: Let's lock sprint scope. Top priority is the export pagination fix, that's now a must-ship.
+Finn Walsh: I can take that, I already scoped it last week.
+Finn Walsh: I'll take the API rate limit work we pushed from last sprint, plus a couple smaller bug fixes from the backlog.
+Sofia Reyes: Sounds good. Anything blocking either of you?
+Finn Walsh: Just need a staging dataset large enough to properly test the export fix, over a hundred thousand rows.
+Sofia Reyes: I'll get that set up today so it doesn't block you.",94,sprint_planning,0,Sprint Planning & Eng Backlog,roadmap/planning,"Sofia Reyes: Let's lock sprint scope. Top priority is the export pagination fix, that's now a must-ship.
+Finn Walsh: I can take that, I already scoped it last week.
+Finn Walsh: I'll take the API rate limit work we pushed from last sprint, plus a couple smaller bug fixes from the backlog.
+Sofia Reyes: Sounds good. Anything blocking either of you?
+Finn Walsh: Just need a staging dataset large enough to properly test the export fix, over a hundred thousand rows.
+Sofia Reyes: I'll get that set up today so it doesn't block you.",0.5817,0.05,neutral,2026-08-17,False
+CALL-0061,support,2026-08-24,6,Harborview Financial,"['Omar Siddiqui', 'Nadia Brooks']","Nadia Brooks: Hi, this is Nadia Brooks, calling about an issue we're seeing.
+Omar Siddiqui: Of course, what's going on?
+Nadia Brooks: The dashboard has been really slow the last few days, sometimes thirty seconds just to load a page.
+Omar Siddiqui: I'm sorry about that -- let me check if your org is on one of the clusters we flagged for a capacity issue this week.
+Nadia Brooks: Got it, appreciate the quick turnaround on this.
+Omar Siddiqui: All good, I'll keep you posted if anything changes.",88,performance,9,Routine Support Resolution & Check-ins,performance,"Hi, this is Nadia Brooks, calling about an issue we're seeing. The dashboard has been really slow the last few days, sometimes thirty seconds just to load a page. Got it, appreciate the quick turnaround on this.",0.4019,-0.35,negative,2026-08-24,False
+CALL-0062,support,2026-08-25,4,Alderman Consulting,"['Omar Siddiqui', 'Robin Haas']","Robin Haas: Hey, Robin Haas here. Just ran the export we talked about last week.
+Omar Siddiqui: Oh good, how did it go?
+Robin Haas: I just want to say -- it worked. We exported about ninety thousand rows and got the full file, no truncation.
+Robin Haas: Our finance team is pretty happy, we were starting to lose confidence in the numbers.
+Omar Siddiqui: Glad it's working! Engineering shipped the fix last Thursday -- it removes the old row cap entirely.
+Robin Haas: Thanks for not letting this drop. It matters more than you'd think.",96,export_bug_resolved,3,Export/Reporting Bug -- Customer Impact,export/reporting bug,"Hey, Robin Haas here. Just ran the export we talked about last week. I just want to say -- it worked. We exported about ninety thousand rows and got the full file, no truncation. Our finance team is pretty happy, we were starting to lose confidence in the numbers. Thanks for not letting this drop. It matters more than you'd think.",0.8034,0.9,positive,2026-08-24,False
+CALL-0063,support,2026-08-25,17,Harborview Financial,"['Dana Okafor', 'Priya Nair']","Priya Nair: Hi, it's Priya Nair -- got a few minutes?
+Dana Okafor: Of course, what's going on?
+Priya Nair: How do we bulk-import contacts without creating duplicates?
+Dana Okafor: There's a dedupe setting in the import wizard based on email match, let me walk you through the import flow.
+Priya Nair: Got it, appreciate the quick turnaround on this.
+Dana Okafor: All good, I'll keep you posted if anything changes.",71,how_to,3,Export/Reporting Bug -- Customer Impact,how-to/training,"Hi, it's Priya Nair -- got a few minutes? How do we bulk-import contacts without creating duplicates? Got it, appreciate the quick turnaround on this.",0.2896,0.15,neutral,2026-08-24,False
+CALL-0064,internal,2026-08-25,18,Cross-functional,"['Devon Pratt', 'Casey Lindqvist']","Mina Oyelaran: Let's review accounts flagged as at-risk this month.
+Teodora Ilic: Two stand out -- one is evaluating Lumina Analytics on pricing, the other is blocked on the export bug and won't commit to renewal until it's fixed.
+Tobias Krantz: The export fix is already prioritized for this sprint, so that one should resolve itself if we ship on time.
+Mina Oyelaran: Good. For the pricing-driven one, I think Smart Alerts plus a pricing conversation is probably our best retention play.
+Teodora Ilic: Agreed, I'll loop in the account exec on pricing flexibility this week.",96,churn_risk_review,8,Churn Risk Review & Retention Strategy,account health/renewal,"Mina Oyelaran: Let's review accounts flagged as at-risk this month.
+Teodora Ilic: Two stand out -- one is evaluating Lumina Analytics on pricing, the other is blocked on the export bug and won't commit to renewal until it's fixed.
+Tobias Krantz: The export fix is already prioritized for this sprint, so that one should resolve itself if we ship on time.
+Mina Oyelaran: Good. For the pricing-driven one, I think Smart Alerts plus a pricing conversation is probably our best retention play.
+Teodora Ilic: Agreed, I'll loop in the account exec on pricing flexibility this week.",0.9362,-0.7,negative,2026-08-24,True
+CALL-0065,external,2026-08-26,18,Ridgeline Energy,"['Marcus Webb', 'Owen Castellan']","Marcus Webb: Hi Owen Castellan, thanks for hopping on, what's on your mind today?
+Owen Castellan: We've had such a good experience, would you be open to us doing a case study together?
+Marcus Webb: Absolutely, I'd love that, let me connect you with our customer marketing team to scope it out.
+Owen Castellan: Sounds good, appreciate you looking into it.
+Marcus Webb: Of course, I'll follow up with next steps by end of week.",75,reference_request,12,Reference Requests & Contract Follow-ups,reference/case study,"We've had such a good experience, would you be open to us doing a case study together? Sounds good, appreciate you looking into it.",0.8176,0.55,positive,2026-08-24,False
+CALL-0066,internal,2026-08-26,20,Platform Team,['Tobias Krantz'],"Tobias Krantz: Let's go through the postmortem for last week's regional slowdown.
+Nikhil Rao: Root cause was a database connection pool exhaustion during a traffic spike from one large customer's batch job.
+Finn Walsh: We didn't have alerting on pool saturation specifically, only on overall latency, so we caught it later than we should have.
+Tobias Krantz: How long was the customer-visible impact?
+Nikhil Rao: About forty minutes of degraded performance, no full outage, but several customers noticed and a few filed support tickets.
+Tobias Krantz: Okay, action items: add pool saturation alerting, and let's look at rate-limiting batch jobs from a single tenant.
+Finn Walsh: I'll own the alerting piece, should be done by end of week.",118,incident_postmortem,7,Incident Postmortem (Infra/Performance),incident/postmortem,"Tobias Krantz: Let's go through the postmortem for last week's regional slowdown.
+Nikhil Rao: Root cause was a database connection pool exhaustion during a traffic spike from one large customer's batch job.
+Finn Walsh: We didn't have alerting on pool saturation specifically, only on overall latency, so we caught it later than we should have.
+Tobias Krantz: How long was the customer-visible impact?
+Nikhil Rao: About forty minutes of degraded performance, no full outage, but several customers noticed and a few filed support tickets.
+Tobias Krantz: Okay, action items: add pool saturation alerting, and let's look at rate-limiting batch jobs from a single tenant.
+Finn Walsh: I'll own the alerting piece, should be done by end of week.",0.3919,-0.15,negative,2026-08-24,False
+CALL-0067,support,2026-08-26,18,Ashford Realty Group,"['Alexis Park', 'Nadia Brooks']","Nadia Brooks: Hi, it's Nadia Brooks -- got a few minutes?
+Alexis Park: Of course, what's going on?
+Nadia Brooks: Is something wrong on your end? Everything in the app feels sluggish today, not just one feature.
+Alexis Park: We did have a brief regional slowdown about two hours ago, it should be resolved now, but let me confirm your region specifically.
+Nadia Brooks: Okay, that makes sense, thanks for explaining.
+Alexis Park: All good, I'll keep you posted if anything changes.",82,performance,9,Routine Support Resolution & Check-ins,performance,"Hi, it's Nadia Brooks -- got a few minutes? Is something wrong on your end? Everything in the app feels sluggish today, not just one feature. Okay, that makes sense, thanks for explaining.",-0.3313,-0.5,negative,2026-08-24,False
+CALL-0068,support,2026-08-27,13,Vantage Retail Group,"['Liam Chen', 'Chris Patel']","Chris Patel: Hey, Chris Patel here, hoping you can help with something.
+Liam Chen: Of course, what's going on?
+Chris Patel: Just wanted to say the new dashboard update has been great, the team's actually using it daily now.
+Liam Chen: That's wonderful to hear, I'll pass that along to the product team, they'll be glad to know it's landing well.
+Chris Patel: Okay, that makes sense, thanks for explaining.
+Liam Chen: All good, I'll keep you posted if anything changes.",81,positive_checkin,9,Routine Support Resolution & Check-ins,positive checkin,"Hey, Chris Patel here, hoping you can help with something. Just wanted to say the new dashboard update has been great, the team's actually using it daily now. Okay, that makes sense, thanks for explaining.",0.9246,0.7,positive,2026-08-24,False
+CALL-0069,external,2026-08-27,20,Union Square Media,"['Jordan Mills', 'Sam Oduya']","Jordan Mills: Hey Sam Oduya, how are things going ahead of the renewal discussion?
+Sam Oduya: I'll be honest with you -- we've been evaluating Lumina Analytics as an alternative.
+Jordan Mills: I appreciate you telling me directly. Can I ask what's driving that?
+Sam Oduya: Mostly pricing, their quote came in meaningfully lower, and their new dashboards look pretty slick in the demo.
+Jordan Mills: That's useful to know. We've actually just shipped some new alerting and reporting capability that might close some of that gap -- can I show you before you decide anything?
+Sam Oduya: Sure, I'm not set on switching, it's early. But the price difference is real and I'll need a good reason to justify staying.
+Jordan Mills: Fair enough, let me put together a comparison and see what we can do on pricing too. I'd rather have that conversation than lose you to a feature gap we've already closed.",155,renewal_risk_competitor,1,Competitive Threat (Pricing/Capability Gap),competitive threat,"I'll be honest with you -- we've been evaluating Lumina Analytics as an alternative. Mostly pricing, their quote came in meaningfully lower, and their new dashboards look pretty slick in the demo. Sure, I'm not set on switching, it's early. But the price difference is real and I'll need a good reason to justify staying.",0.7992,-0.35,negative,2026-08-24,True
+CALL-0070,external,2026-08-28,23,Ashford Realty Group,"['Teodora Ilic', 'Jules Ferreira']","Teodora Ilic: Hi Jules Ferreira, wanted to tell you about something we just shipped -- Smart Alerts.
+Jules Ferreira: Oh nice, what does it do?
+Teodora Ilic: It lets you set threshold-based alerts on any metric in your dashboards, so instead of checking reports manually your team gets notified automatically.
+Jules Ferreira: That's actually exactly what we've been asking for internally. We've been manually checking dashboards every morning.
+Teodora Ilic: That's great to hear, it's included in the Pro tier, I can get it turned on for you today if you want to try it.
+Jules Ferreira: Yes please, turn it on. If this works like you're describing it could save my team a lot of time.
+Teodora Ilic: I'll get it enabled and send over a quick setup guide. Would love thirty minutes next week to hear how it's going.
+Jules Ferreira: Definitely, this is the kind of thing that makes the renewal conversation easy, honestly.",157,upsell_smart_alerts,2,"Smart Alerts Launch, Upsell & QBR",smart alerts launch/upsell,"Oh nice, what does it do? That's actually exactly what we've been asking for internally. We've been manually checking dashboards every morning. Yes please, turn it on. If this works like you're describing it could save my team a lot of time. Definitely, this is the kind of thing that makes the renewal conversation easy, honestly.",0.9643,0.85,positive,2026-08-24,False
+CALL-0071,internal,2026-08-28,15,Platform Team,"['Sofia Reyes', 'Devon Pratt']","Sofia Reyes: We need to talk about headcount for the platform team, we're stretched thin with the export rework plus normal roadmap work.
+Mina Oyelaran: Agreed, I think we've been underinvesting in the data pipeline side generally, it's not just this one bug.
+Sofia Reyes: I want to open a req for a senior backend engineer focused on the export and reporting pipeline specifically.
+Mina Oyelaran: Makes sense, I'll support that in planning. Can you have a job description draft by next week?
+Sofia Reyes: Yes, I'll have it ready for review by Wednesday.",94,hiring_discussion,10,Mixed: Export Escalation Urgency + Staffing,hiring/staffing,"Sofia Reyes: We need to talk about headcount for the platform team, we're stretched thin with the export rework plus normal roadmap work.
+Mina Oyelaran: Agreed, I think we've been underinvesting in the data pipeline side generally, it's not just this one bug.
+Sofia Reyes: I want to open a req for a senior backend engineer focused on the export and reporting pipeline specifically.
+Mina Oyelaran: Makes sense, I'll support that in planning. Can you have a job description draft by next week?
+Sofia Reyes: Yes, I'll have it ready for review by Wednesday.",0.8979,-0.2,negative,2026-08-24,False
+CALL-0072,internal,2026-08-28,22,Cross-functional,"['Devon Pratt', 'Sofia Reyes']","Devon Pratt: Smart Alerts is on track to ship this week, let's talk rollout.
+Sofia Reyes: Engineering side is ready, we finished load testing the alert evaluation service yesterday.
+Marcus Webb: On the account side, I've got a shortlist of accounts to pitch it to first, mostly ones that have asked for something like this before.
+Devon Pratt: Good, let's prioritize the accounts we flagged as at-risk too, especially the ones evaluating competitors -- this is a good retention lever.
+Marcus Webb: Agreed, I've already got a couple of those conversations lined up this week.
+Sofia Reyes: We'll keep an eye on adoption metrics the first week in case anything needs tuning.",112,launch_planning_smart_alerts,2,"Smart Alerts Launch, Upsell & QBR",smart alerts launch/upsell,"Devon Pratt: Smart Alerts is on track to ship this week, let's talk rollout.
+Sofia Reyes: Engineering side is ready, we finished load testing the alert evaluation service yesterday.
+Marcus Webb: On the account side, I've got a shortlist of accounts to pitch it to first, mostly ones that have asked for something like this before.
+Devon Pratt: Good, let's prioritize the accounts we flagged as at-risk too, especially the ones evaluating competitors -- this is a good retention lever.
+Marcus Webb: Agreed, I've already got a couple of those conversations lined up this week.
+Sofia Reyes: We'll keep an eye on adoption metrics the first week in case anything needs tuning.",0.9413,0.30000000000000004,positive,2026-08-24,True
+CALL-0073,support,2026-08-28,6,Pinecrest Education,"['Dana Okafor', 'Morgan Reyes']","Morgan Reyes: Hi, it's Morgan Reyes -- got a few minutes?
+Dana Okafor: Of course, what's going on?
+Morgan Reyes: Is there a way to schedule a report to email automatically every Monday?
+Dana Okafor: Yes, under Reports you can set a recurring schedule -- I'll show you where that toggle lives.
+Morgan Reyes: Alright, that's good to know. Anything you need from my side?
+Dana Okafor: Not at the moment, I'll follow up once this is fully resolved on our end.",82,how_to,2,"Smart Alerts Launch, Upsell & QBR",how-to/training,"Hi, it's Morgan Reyes -- got a few minutes? Is there a way to schedule a report to email automatically every Monday? Alright, that's good to know. Anything you need from my side?",0.6641,0.15,neutral,2026-08-24,False
+CALL-0074,external,2026-08-28,26,Trestle Robotics,"['Casey Lindqvist', 'Jules Ferreira']","Casey Lindqvist: Hi Jules Ferreira, thanks for making time -- wanted to talk through the renewal coming up next month.
+Jules Ferreira: Sure, happy to. Overall it's been a good year, usage has actually grown across a couple teams.
+Casey Lindqvist: That matches what I'm seeing on our end too -- adoption's up about thirty percent year over year for your org.
+Jules Ferreira: Yeah, the ops team basically lives in the tool now. I don't see any reason we wouldn't renew.
+Casey Lindqvist: Great to hear. Given the growth, would it make sense to talk about adding seats for the two newer teams?
+Jules Ferreira: Possibly, let me check budget on my end, but I'm open to the conversation.
+Casey Lindqvist: Perfect, I'll send over a proposal with a couple options and we can regroup next week.",138,renewal_healthy,4,Healthy Renewal & Expansion,account health/renewal,"Sure, happy to. Overall it's been a good year, usage has actually grown across a couple teams. Yeah, the ops team basically lives in the tool now. I don't see any reason we wouldn't renew. Possibly, let me check budget on my end, but I'm open to the conversation.",0.6757,0.8,positive,2026-08-24,False
+CALL-0075,internal,2026-08-29,25,Platform Team,['Tobias Krantz'],"Tobias Krantz: Let's lock sprint scope. Top priority is the export pagination fix, that's now a must-ship.
+Sam Doyle: I can take that, I already scoped it last week.
+Beatriz Souza: I'll take the API rate limit work we pushed from last sprint, plus a couple smaller bug fixes from the backlog.
+Tobias Krantz: Sounds good. Anything blocking either of you?
+Sam Doyle: Just need a staging dataset large enough to properly test the export fix, over a hundred thousand rows.
+Tobias Krantz: I'll get that set up today so it doesn't block you.",94,sprint_planning,0,Sprint Planning & Eng Backlog,roadmap/planning,"Tobias Krantz: Let's lock sprint scope. Top priority is the export pagination fix, that's now a must-ship.
+Sam Doyle: I can take that, I already scoped it last week.
+Beatriz Souza: I'll take the API rate limit work we pushed from last sprint, plus a couple smaller bug fixes from the backlog.
+Tobias Krantz: Sounds good. Anything blocking either of you?
+Sam Doyle: Just need a staging dataset large enough to properly test the export fix, over a hundred thousand rows.
+Tobias Krantz: I'll get that set up today so it doesn't block you.",0.5817,0.05,neutral,2026-08-24,False
+CALL-0076,internal,2026-08-30,22,Cross-functional,"['Mina Oyelaran', 'Sofia Reyes']","Wes Carrington: Smart Alerts is on track to ship this week, let's talk rollout.
+Tobias Krantz: Engineering side is ready, we finished load testing the alert evaluation service yesterday.
+Priya Anand: On the account side, I've got a shortlist of accounts to pitch it to first, mostly ones that have asked for something like this before.
+Wes Carrington: Good, let's prioritize the accounts we flagged as at-risk too, especially the ones evaluating competitors -- this is a good retention lever.
+Priya Anand: Agreed, I've already got a couple of those conversations lined up this week.
+Tobias Krantz: We'll keep an eye on adoption metrics the first week in case anything needs tuning.",112,launch_planning_smart_alerts,2,"Smart Alerts Launch, Upsell & QBR",smart alerts launch/upsell,"Wes Carrington: Smart Alerts is on track to ship this week, let's talk rollout.
+Tobias Krantz: Engineering side is ready, we finished load testing the alert evaluation service yesterday.
+Priya Anand: On the account side, I've got a shortlist of accounts to pitch it to first, mostly ones that have asked for something like this before.
+Wes Carrington: Good, let's prioritize the accounts we flagged as at-risk too, especially the ones evaluating competitors -- this is a good retention lever.
+Priya Anand: Agreed, I've already got a couple of those conversations lined up this week.
+Tobias Krantz: We'll keep an eye on adoption metrics the first week in case anything needs tuning.",0.9413,0.30000000000000004,positive,2026-08-24,True
+CALL-0077,support,2026-09-03,17,Vantage Retail Group,"['Alexis Park', 'Nadia Brooks']","Nadia Brooks: Hi, this is Nadia Brooks, calling about an issue we're seeing.
+Alexis Park: Of course, what's going on?
+Nadia Brooks: Is something wrong on your end? Everything in the app feels sluggish today, not just one feature.
+Alexis Park: We did have a brief regional slowdown about two hours ago, it should be resolved now, but let me confirm your region specifically.
+Nadia Brooks: Okay, that makes sense, thanks for explaining.
+Alexis Park: Nope, I've got what I need. I'll send a summary email after this call.",89,performance,9,Routine Support Resolution & Check-ins,performance,"Hi, this is Nadia Brooks, calling about an issue we're seeing. Is something wrong on your end? Everything in the app feels sluggish today, not just one feature. Okay, that makes sense, thanks for explaining.",-0.25,-0.5,negative,2026-08-31,False
+CALL-0078,support,2026-09-04,11,Castellan Insurance,"['Dana Okafor', 'Elena Vasquez']","Elena Vasquez: Hi, this is Elena Vasquez, calling about an issue we're seeing.
+Dana Okafor: Of course, what's going on?
+Elena Vasquez: Can you explain why there's an overage charge on this invoice? We didn't think we were near our usage limit.
+Dana Okafor: Good question -- looking at your usage dashboard, there was a spike from an API integration pulling data more frequently than expected. I can show you where that happened.
+Elena Vasquez: Alright, that's good to know. Anything you need from my side?
+Dana Okafor: Not at the moment, I'll follow up once this is fully resolved on our end.",103,billing,8,Churn Risk Review & Retention Strategy,billing,"Hi, this is Elena Vasquez, calling about an issue we're seeing. Can you explain why there's an overage charge on this invoice? We didn't think we were near our usage limit. Alright, that's good to know. Anything you need from my side?",0.644,-0.3,negative,2026-08-31,False
+CALL-0079,external,2026-09-05,24,Summit Manufacturing,"['Priya Anand', 'Chris Patel']","Priya Anand: Hi Chris Patel, wanted to tell you about something we just shipped -- Smart Alerts.
+Chris Patel: Oh nice, what does it do?
+Priya Anand: It lets you set threshold-based alerts on any metric in your dashboards, so instead of checking reports manually your team gets notified automatically.
+Chris Patel: That's actually exactly what we've been asking for internally. We've been manually checking dashboards every morning.
+Priya Anand: That's great to hear, it's included in the Pro tier, I can get it turned on for you today if you want to try it.
+Chris Patel: Yes please, turn it on. If this works like you're describing it could save my team a lot of time.
+Priya Anand: I'll get it enabled and send over a quick setup guide. Would love thirty minutes next week to hear how it's going.
+Chris Patel: Definitely, this is the kind of thing that makes the renewal conversation easy, honestly.",157,upsell_smart_alerts,2,"Smart Alerts Launch, Upsell & QBR",smart alerts launch/upsell,"Oh nice, what does it do? That's actually exactly what we've been asking for internally. We've been manually checking dashboards every morning. Yes please, turn it on. If this works like you're describing it could save my team a lot of time. Definitely, this is the kind of thing that makes the renewal conversation easy, honestly.",0.9643,0.85,positive,2026-08-31,False
+CALL-0080,internal,2026-09-06,30,Product Team,"['Devon Pratt', 'Tobias Krantz']","Mina Oyelaran: For next quarter, I want to prioritize reliability work on exports and reporting given the pattern we've seen in support tickets.
+Tobias Krantz: Agreed, that cluster of complaints has been consistent for weeks, it shouldn't have taken this long to surface as a priority honestly.
+Mina Oyelaran: Fair, I think part of the problem is support tickets and account escalations aren't visible to engineering in one place.
+Tobias Krantz: That's a good point, we're basically relying on someone manually noticing the pattern instead of having it surfaced automatically.
+Mina Oyelaran: Yeah, that itself might be worth building -- some kind of cross-channel signal aggregation so we catch these patterns faster next time.
+Tobias Krantz: I like that. Let's scope it as a smaller internal tooling project alongside the bigger roadmap items.",133,roadmap_planning,6,Roadmap Prioritization & Signal Gaps,roadmap/planning,"Mina Oyelaran: For next quarter, I want to prioritize reliability work on exports and reporting given the pattern we've seen in support tickets.
+Tobias Krantz: Agreed, that cluster of complaints has been consistent for weeks, it shouldn't have taken this long to surface as a priority honestly.
+Mina Oyelaran: Fair, I think part of the problem is support tickets and account escalations aren't visible to engineering in one place.
+Tobias Krantz: That's a good point, we're basically relying on someone manually noticing the pattern instead of having it surfaced automatically.
+Mina Oyelaran: Yeah, that itself might be worth building -- some kind of cross-channel signal aggregation so we catch these patterns faster next time.
+Tobias Krantz: I like that. Let's scope it as a smaller internal tooling project alongside the bigger roadmap items.",0.9349,-0.05,neutral,2026-08-31,False
+CALL-0081,internal,2026-09-06,18,Cross-functional,"['Wes Carrington', 'Marcus Webb']","Wes Carrington: Let's review accounts flagged as at-risk this month.
+Teodora Ilic: Two stand out -- one is evaluating Lumina Analytics on pricing, the other is blocked on the export bug and won't commit to renewal until it's fixed.
+Tobias Krantz: The export fix is already prioritized for this sprint, so that one should resolve itself if we ship on time.
+Wes Carrington: Good. For the pricing-driven one, I think Smart Alerts plus a pricing conversation is probably our best retention play.
+Teodora Ilic: Agreed, I'll loop in the account exec on pricing flexibility this week.",96,churn_risk_review,8,Churn Risk Review & Retention Strategy,account health/renewal,"Wes Carrington: Let's review accounts flagged as at-risk this month.
+Teodora Ilic: Two stand out -- one is evaluating Lumina Analytics on pricing, the other is blocked on the export bug and won't commit to renewal until it's fixed.
+Tobias Krantz: The export fix is already prioritized for this sprint, so that one should resolve itself if we ship on time.
+Wes Carrington: Good. For the pricing-driven one, I think Smart Alerts plus a pricing conversation is probably our best retention play.
+Teodora Ilic: Agreed, I'll loop in the account exec on pricing flexibility this week.",0.9362,-0.7,negative,2026-08-31,True
+CALL-0082,external,2026-09-07,14,Harborview Financial,"['Jordan Mills', 'Jules Ferreira']","Jordan Mills: Hi Jules Ferreira, wanted to tell you about something we just shipped -- Smart Alerts.
+Jules Ferreira: Oh nice, what does it do?
+Jordan Mills: It lets you set threshold-based alerts on any metric in your dashboards, so instead of checking reports manually your team gets notified automatically.
+Jules Ferreira: That's actually exactly what we've been asking for internally. We've been manually checking dashboards every morning.
+Jordan Mills: That's great to hear, it's included in the Pro tier, I can get it turned on for you today if you want to try it.
+Jules Ferreira: Yes please, turn it on. If this works like you're describing it could save my team a lot of time.
+Jordan Mills: I'll get it enabled and send over a quick setup guide. Would love thirty minutes next week to hear how it's going.
+Jules Ferreira: Definitely, this is the kind of thing that makes the renewal conversation easy, honestly.",157,upsell_smart_alerts,2,"Smart Alerts Launch, Upsell & QBR",smart alerts launch/upsell,"Oh nice, what does it do? That's actually exactly what we've been asking for internally. We've been manually checking dashboards every morning. Yes please, turn it on. If this works like you're describing it could save my team a lot of time. Definitely, this is the kind of thing that makes the renewal conversation easy, honestly.",0.9643,0.85,positive,2026-09-07,False
+CALL-0083,support,2026-09-07,18,Summit Manufacturing,"['Omar Siddiqui', 'Elena Vasquez']","Elena Vasquez: Hi, this is Elena Vasquez, calling about an issue we're seeing.
+Omar Siddiqui: Of course, what's going on?
+Elena Vasquez: New hires aren't able to self-provision through SSO, they're stuck with no account at all.
+Omar Siddiqui: Let's check whether just-in-time provisioning is enabled for your SSO connection -- that might be turned off.
+Elena Vasquez: Got it, appreciate the quick turnaround on this.
+Omar Siddiqui: All good, I'll keep you posted if anything changes.",77,login_sso,11,Login/SSO & General Support Resolution,auth/access,"Hi, this is Elena Vasquez, calling about an issue we're seeing. New hires aren't able to self-provision through SSO, they're stuck with no account at all. Got it, appreciate the quick turnaround on this.",-0.128,-0.55,negative,2026-09-07,False
+CALL-0084,internal,2026-09-08,25,Platform Team,['Tobias Krantz'],"Tobias Krantz: Let's lock sprint scope. Top priority is the export pagination fix, that's now a must-ship.
+Nikhil Rao: I can take that, I already scoped it last week.
+Finn Walsh: I'll take the API rate limit work we pushed from last sprint, plus a couple smaller bug fixes from the backlog.
+Tobias Krantz: Sounds good. Anything blocking either of you?
+Nikhil Rao: Just need a staging dataset large enough to properly test the export fix, over a hundred thousand rows.
+Tobias Krantz: I'll get that set up today so it doesn't block you.",94,sprint_planning,0,Sprint Planning & Eng Backlog,roadmap/planning,"Tobias Krantz: Let's lock sprint scope. Top priority is the export pagination fix, that's now a must-ship.
+Nikhil Rao: I can take that, I already scoped it last week.
+Finn Walsh: I'll take the API rate limit work we pushed from last sprint, plus a couple smaller bug fixes from the backlog.
+Tobias Krantz: Sounds good. Anything blocking either of you?
+Nikhil Rao: Just need a staging dataset large enough to properly test the export fix, over a hundred thousand rows.
+Tobias Krantz: I'll get that set up today so it doesn't block you.",0.5817,0.05,neutral,2026-09-07,False
+CALL-0085,support,2026-09-08,10,Silverline Telecom,"['Alexis Park', 'Taylor Grant']","Taylor Grant: Hey, Taylor Grant here, hoping you can help with something.
+Alexis Park: Of course, what's going on?
+Taylor Grant: Running any report with a date range over sixty days just times out now.
+Alexis Park: That's a known strain point for us with larger date ranges, I'll log this and see if we can get you on an optimized query path.
+Taylor Grant: Okay, that makes sense, thanks for explaining.
+Alexis Park: Not at the moment, I'll follow up once this is fully resolved on our end.",89,performance,3,Export/Reporting Bug -- Customer Impact,performance,"Hey, Taylor Grant here, hoping you can help with something. Running any report with a date range over sixty days just times out now. Okay, that makes sense, thanks for explaining.",0.8957,-0.5,negative,2026-09-07,False
+CALL-0086,external,2026-09-09,16,Pinecrest Education,"['Priya Anand', 'Jules Ferreira']","Priya Anand: Hi Jules Ferreira, wanted to tell you about something we just shipped -- Smart Alerts.
+Jules Ferreira: Oh nice, what does it do?
+Priya Anand: It lets you set threshold-based alerts on any metric in your dashboards, so instead of checking reports manually your team gets notified automatically.
+Jules Ferreira: That's actually exactly what we've been asking for internally. We've been manually checking dashboards every morning.
+Priya Anand: That's great to hear, it's included in the Pro tier, I can get it turned on for you today if you want to try it.
+Jules Ferreira: Yes please, turn it on. If this works like you're describing it could save my team a lot of time.
+Priya Anand: I'll get it enabled and send over a quick setup guide. Would love thirty minutes next week to hear how it's going.
+Jules Ferreira: Definitely, this is the kind of thing that makes the renewal conversation easy, honestly.",157,upsell_smart_alerts,2,"Smart Alerts Launch, Upsell & QBR",smart alerts launch/upsell,"Oh nice, what does it do? That's actually exactly what we've been asking for internally. We've been manually checking dashboards every morning. Yes please, turn it on. If this works like you're describing it could save my team a lot of time. Definitely, this is the kind of thing that makes the renewal conversation easy, honestly.",0.9643,0.85,positive,2026-09-07,False
+CALL-0087,internal,2026-09-10,30,Product Team,"['Wes Carrington', 'Tobias Krantz']","Devon Pratt: For next quarter, I want to prioritize reliability work on exports and reporting given the pattern we've seen in support tickets.
+Tobias Krantz: Agreed, that cluster of complaints has been consistent for weeks, it shouldn't have taken this long to surface as a priority honestly.
+Devon Pratt: Fair, I think part of the problem is support tickets and account escalations aren't visible to engineering in one place.
+Tobias Krantz: That's a good point, we're basically relying on someone manually noticing the pattern instead of having it surfaced automatically.
+Devon Pratt: Yeah, that itself might be worth building -- some kind of cross-channel signal aggregation so we catch these patterns faster next time.
+Tobias Krantz: I like that. Let's scope it as a smaller internal tooling project alongside the bigger roadmap items.",133,roadmap_planning,6,Roadmap Prioritization & Signal Gaps,roadmap/planning,"Devon Pratt: For next quarter, I want to prioritize reliability work on exports and reporting given the pattern we've seen in support tickets.
+Tobias Krantz: Agreed, that cluster of complaints has been consistent for weeks, it shouldn't have taken this long to surface as a priority honestly.
+Devon Pratt: Fair, I think part of the problem is support tickets and account escalations aren't visible to engineering in one place.
+Tobias Krantz: That's a good point, we're basically relying on someone manually noticing the pattern instead of having it surfaced automatically.
+Devon Pratt: Yeah, that itself might be worth building -- some kind of cross-channel signal aggregation so we catch these patterns faster next time.
+Tobias Krantz: I like that. Let's scope it as a smaller internal tooling project alongside the bigger roadmap items.",0.9349,-0.05,neutral,2026-09-07,False
+CALL-0088,support,2026-09-11,15,Marbury Legal Services,"['Alexis Park', 'Robin Haas']","Robin Haas: Hi, it's Robin Haas -- got a few minutes?
+Alexis Park: Of course, what's going on?
+Robin Haas: Half our team got locked out this morning, nobody can log in through our SSO.
+Alexis Park: That sounds like it could be a SAML assertion issue on our end -- let me check the identity provider logs for your org.
+Robin Haas: Okay, that makes sense, thanks for explaining.
+Alexis Park: Nope, I've got what I need. I'll send a summary email after this call.",86,login_sso,11,Login/SSO & General Support Resolution,auth/access,"Hi, it's Robin Haas -- got a few minutes? Half our team got locked out this morning, nobody can log in through our SSO. Okay, that makes sense, thanks for explaining.",0.5859,-0.7,negative,2026-09-07,False
+CALL-0089,external,2026-09-12,29,Vantage Retail Group,"['Teodora Ilic', 'Nadia Brooks']","Teodora Ilic: Thanks for joining the QBR, Nadia Brooks. Let's walk through the last quarter.
+Nadia Brooks: Sounds good, go ahead.
+Teodora Ilic: Usage is up, active users grew from about 80 to 110, and your team's running roughly 40% more reports than last quarter.
+Nadia Brooks: That tracks, we rolled it out to the regional ops teams in April.
+Teodora Ilic: On the support side, you had six tickets this quarter, mostly resolved within a day except the export issue which took longer.
+Nadia Brooks: Yeah that one was rough, but otherwise it's been smooth. Any new features coming we should know about?
+Teodora Ilic: Yes, actually -- we just launched Smart Alerts, it might be relevant for your ops team's monitoring use case.
+Nadia Brooks: Interesting, send me more on that, could be useful.",136,qbr,2,"Smart Alerts Launch, Upsell & QBR",account health/renewal,"Sounds good, go ahead. That tracks, we rolled it out to the regional ops teams in April. Yeah that one was rough, but otherwise it's been smooth. Any new features coming we should know about? Interesting, send me more on that, could be useful.",0.8735,0.3,positive,2026-09-07,False
+CALL-0090,support,2026-09-12,6,Fenwick & Co,"['Liam Chen', 'Priya Nair']","Priya Nair: Hey, Priya Nair here, hoping you can help with something.
+Liam Chen: Of course, what's going on?
+Priya Nair: Running any report with a date range over sixty days just times out now.
+Liam Chen: That's a known strain point for us with larger date ranges, I'll log this and see if we can get you on an optimized query path.
+Priya Nair: Okay, that makes sense, thanks for explaining.
+Liam Chen: Not at the moment, I'll follow up once this is fully resolved on our end.",89,performance,3,Export/Reporting Bug -- Customer Impact,performance,"Hey, Priya Nair here, hoping you can help with something. Running any report with a date range over sixty days just times out now. Okay, that makes sense, thanks for explaining.",0.8519,-0.5,negative,2026-09-07,False
+CALL-0091,internal,2026-09-13,18,Cross-functional,"['Mina Oyelaran', 'Marcus Webb']","Mina Oyelaran: Let's review accounts flagged as at-risk this month.
+Jordan Mills: Two stand out -- one is evaluating Lumina Analytics on pricing, the other is blocked on the export bug and won't commit to renewal until it's fixed.
+Tobias Krantz: The export fix is already prioritized for this sprint, so that one should resolve itself if we ship on time.
+Mina Oyelaran: Good. For the pricing-driven one, I think Smart Alerts plus a pricing conversation is probably our best retention play.
+Jordan Mills: Agreed, I'll loop in the account exec on pricing flexibility this week.",96,churn_risk_review,8,Churn Risk Review & Retention Strategy,account health/renewal,"Mina Oyelaran: Let's review accounts flagged as at-risk this month.
+Jordan Mills: Two stand out -- one is evaluating Lumina Analytics on pricing, the other is blocked on the export bug and won't commit to renewal until it's fixed.
+Tobias Krantz: The export fix is already prioritized for this sprint, so that one should resolve itself if we ship on time.
+Mina Oyelaran: Good. For the pricing-driven one, I think Smart Alerts plus a pricing conversation is probably our best retention play.
+Jordan Mills: Agreed, I'll loop in the account exec on pricing flexibility this week.",0.9362,-0.7,negative,2026-09-07,True
+CALL-0092,support,2026-09-14,6,Marbury Legal Services,"['Dana Okafor', 'Taylor Grant']","Taylor Grant: Hi, it's Taylor Grant -- got a few minutes?
+Dana Okafor: Of course, what's going on?
+Taylor Grant: The webhook for deal-stage-changed just... stopped firing about a week ago.
+Dana Okafor: Let's verify the webhook subscription is still active -- sometimes those get disabled after repeated delivery failures.
+Taylor Grant: Okay, that makes sense, thanks for explaining.
+Dana Okafor: Not at the moment, I'll follow up once this is fully resolved on our end.",76,integration_api,9,Routine Support Resolution & Check-ins,integration/api,"Hi, it's Taylor Grant -- got a few minutes? The webhook for deal-stage-changed just... stopped firing about a week ago. Okay, that makes sense, thanks for explaining.",0.4588,-0.55,negative,2026-09-14,False
+CALL-0093,external,2026-09-15,25,Harborview Financial,"['Marcus Webb', 'Morgan Reyes']","Marcus Webb: Hi Morgan Reyes, wanted to tell you about something we just shipped -- Smart Alerts.
+Morgan Reyes: Oh nice, what does it do?
+Marcus Webb: It lets you set threshold-based alerts on any metric in your dashboards, so instead of checking reports manually your team gets notified automatically.
+Morgan Reyes: That's actually exactly what we've been asking for internally. We've been manually checking dashboards every morning.
+Marcus Webb: That's great to hear, it's included in the Pro tier, I can get it turned on for you today if you want to try it.
+Morgan Reyes: Yes please, turn it on. If this works like you're describing it could save my team a lot of time.
+Marcus Webb: I'll get it enabled and send over a quick setup guide. Would love thirty minutes next week to hear how it's going.
+Morgan Reyes: Definitely, this is the kind of thing that makes the renewal conversation easy, honestly.",157,upsell_smart_alerts,2,"Smart Alerts Launch, Upsell & QBR",smart alerts launch/upsell,"Oh nice, what does it do? That's actually exactly what we've been asking for internally. We've been manually checking dashboards every morning. Yes please, turn it on. If this works like you're describing it could save my team a lot of time. Definitely, this is the kind of thing that makes the renewal conversation easy, honestly.",0.9643,0.85,positive,2026-09-14,False
+CALL-0094,internal,2026-09-15,30,Product Team,"['Wes Carrington', 'Tobias Krantz']","Mina Oyelaran: For next quarter, I want to prioritize reliability work on exports and reporting given the pattern we've seen in support tickets.
+Tobias Krantz: Agreed, that cluster of complaints has been consistent for weeks, it shouldn't have taken this long to surface as a priority honestly.
+Mina Oyelaran: Fair, I think part of the problem is support tickets and account escalations aren't visible to engineering in one place.
+Tobias Krantz: That's a good point, we're basically relying on someone manually noticing the pattern instead of having it surfaced automatically.
+Mina Oyelaran: Yeah, that itself might be worth building -- some kind of cross-channel signal aggregation so we catch these patterns faster next time.
+Tobias Krantz: I like that. Let's scope it as a smaller internal tooling project alongside the bigger roadmap items.",133,roadmap_planning,6,Roadmap Prioritization & Signal Gaps,roadmap/planning,"Mina Oyelaran: For next quarter, I want to prioritize reliability work on exports and reporting given the pattern we've seen in support tickets.
+Tobias Krantz: Agreed, that cluster of complaints has been consistent for weeks, it shouldn't have taken this long to surface as a priority honestly.
+Mina Oyelaran: Fair, I think part of the problem is support tickets and account escalations aren't visible to engineering in one place.
+Tobias Krantz: That's a good point, we're basically relying on someone manually noticing the pattern instead of having it surfaced automatically.
+Mina Oyelaran: Yeah, that itself might be worth building -- some kind of cross-channel signal aggregation so we catch these patterns faster next time.
+Tobias Krantz: I like that. Let's scope it as a smaller internal tooling project alongside the bigger roadmap items.",0.9349,-0.05,neutral,2026-09-14,False
+CALL-0095,internal,2026-09-18,22,Cross-functional,"['Mina Oyelaran', 'Sofia Reyes']","Wes Carrington: Smart Alerts is on track to ship this week, let's talk rollout.
+Tobias Krantz: Engineering side is ready, we finished load testing the alert evaluation service yesterday.
+Marcus Webb: On the account side, I've got a shortlist of accounts to pitch it to first, mostly ones that have asked for something like this before.
+Wes Carrington: Good, let's prioritize the accounts we flagged as at-risk too, especially the ones evaluating competitors -- this is a good retention lever.
+Marcus Webb: Agreed, I've already got a couple of those conversations lined up this week.
+Tobias Krantz: We'll keep an eye on adoption metrics the first week in case anything needs tuning.",112,launch_planning_smart_alerts,2,"Smart Alerts Launch, Upsell & QBR",smart alerts launch/upsell,"Wes Carrington: Smart Alerts is on track to ship this week, let's talk rollout.
+Tobias Krantz: Engineering side is ready, we finished load testing the alert evaluation service yesterday.
+Marcus Webb: On the account side, I've got a shortlist of accounts to pitch it to first, mostly ones that have asked for something like this before.
+Wes Carrington: Good, let's prioritize the accounts we flagged as at-risk too, especially the ones evaluating competitors -- this is a good retention lever.
+Marcus Webb: Agreed, I've already got a couple of those conversations lined up this week.
+Tobias Krantz: We'll keep an eye on adoption metrics the first week in case anything needs tuning.",0.9413,0.30000000000000004,positive,2026-09-14,True
+CALL-0096,external,2026-09-18,15,Brightfield Health,"['Priya Anand', 'Priya Nair']","Priya Anand: Hi Priya Nair, wanted to tell you about something we just shipped -- Smart Alerts.
+Priya Nair: Oh nice, what does it do?
+Priya Anand: It lets you set threshold-based alerts on any metric in your dashboards, so instead of checking reports manually your team gets notified automatically.
+Priya Nair: That's actually exactly what we've been asking for internally. We've been manually checking dashboards every morning.
+Priya Anand: That's great to hear, it's included in the Pro tier, I can get it turned on for you today if you want to try it.
+Priya Nair: Yes please, turn it on. If this works like you're describing it could save my team a lot of time.
+Priya Anand: I'll get it enabled and send over a quick setup guide. Would love thirty minutes next week to hear how it's going.
+Priya Nair: Definitely, this is the kind of thing that makes the renewal conversation easy, honestly.",157,upsell_smart_alerts,2,"Smart Alerts Launch, Upsell & QBR",smart alerts launch/upsell,"Oh nice, what does it do? That's actually exactly what we've been asking for internally. We've been manually checking dashboards every morning. Yes please, turn it on. If this works like you're describing it could save my team a lot of time. Definitely, this is the kind of thing that makes the renewal conversation easy, honestly.",0.9643,0.85,positive,2026-09-14,False
+CALL-0097,support,2026-09-22,12,Ashford Realty Group,"['Dana Okafor', 'Taylor Grant']","Taylor Grant: Hi, this is Taylor Grant, calling about an issue we're seeing.
+Dana Okafor: Of course, what's going on?
+Taylor Grant: I'm looking at our last invoice and the seat count seems off -- we removed five users last month but we're still being billed for them.
+Dana Okafor: Let me pull up your account... you're right, the deactivation didn't sync to billing. I'll issue a credit for the difference and fix the sync.
+Taylor Grant: Got it, appreciate the quick turnaround on this.
+Dana Okafor: Nope, I've got what I need. I'll send a summary email after this call.",101,billing,11,Login/SSO & General Support Resolution,billing,"Hi, this is Taylor Grant, calling about an issue we're seeing. I'm looking at our last invoice and the seat count seems off -- we removed five users last month but we're still being billed for them. Got it, appreciate the quick turnaround on this.",0.6486,-0.3,negative,2026-09-21,False
+CALL-0098,external,2026-09-23,23,Pinecrest Education,"['Teodora Ilic', 'Jules Ferreira']","Teodora Ilic: Hi Jules Ferreira, thanks for making time -- wanted to talk through the renewal coming up next month.
+Jules Ferreira: Sure, happy to. Overall it's been a good year, usage has actually grown across a couple teams.
+Teodora Ilic: That matches what I'm seeing on our end too -- adoption's up about thirty percent year over year for your org.
+Jules Ferreira: Yeah, the ops team basically lives in the tool now. I don't see any reason we wouldn't renew.
+Teodora Ilic: Great to hear. Given the growth, would it make sense to talk about adding seats for the two newer teams?
+Jules Ferreira: Possibly, let me check budget on my end, but I'm open to the conversation.
+Teodora Ilic: Perfect, I'll send over a proposal with a couple options and we can regroup next week.",138,renewal_healthy,4,Healthy Renewal & Expansion,account health/renewal,"Sure, happy to. Overall it's been a good year, usage has actually grown across a couple teams. Yeah, the ops team basically lives in the tool now. I don't see any reason we wouldn't renew. Possibly, let me check budget on my end, but I'm open to the conversation.",0.6757,0.8,positive,2026-09-21,False
+CALL-0099,internal,2026-09-24,30,Product Team,"['Devon Pratt', 'Sofia Reyes']","Devon Pratt: For next quarter, I want to prioritize reliability work on exports and reporting given the pattern we've seen in support tickets.
+Tobias Krantz: Agreed, that cluster of complaints has been consistent for weeks, it shouldn't have taken this long to surface as a priority honestly.
+Devon Pratt: Fair, I think part of the problem is support tickets and account escalations aren't visible to engineering in one place.
+Tobias Krantz: That's a good point, we're basically relying on someone manually noticing the pattern instead of having it surfaced automatically.
+Devon Pratt: Yeah, that itself might be worth building -- some kind of cross-channel signal aggregation so we catch these patterns faster next time.
+Tobias Krantz: I like that. Let's scope it as a smaller internal tooling project alongside the bigger roadmap items.",133,roadmap_planning,6,Roadmap Prioritization & Signal Gaps,roadmap/planning,"Devon Pratt: For next quarter, I want to prioritize reliability work on exports and reporting given the pattern we've seen in support tickets.
+Tobias Krantz: Agreed, that cluster of complaints has been consistent for weeks, it shouldn't have taken this long to surface as a priority honestly.
+Devon Pratt: Fair, I think part of the problem is support tickets and account escalations aren't visible to engineering in one place.
+Tobias Krantz: That's a good point, we're basically relying on someone manually noticing the pattern instead of having it surfaced automatically.
+Devon Pratt: Yeah, that itself might be worth building -- some kind of cross-channel signal aggregation so we catch these patterns faster next time.
+Tobias Krantz: I like that. Let's scope it as a smaller internal tooling project alongside the bigger roadmap items.",0.9349,-0.05,neutral,2026-09-21,False
+CALL-0100,external,2026-09-24,14,Alderman Consulting,"['Teodora Ilic', 'Elena Vasquez']","Teodora Ilic: Hi Elena Vasquez, thanks for hopping on, what's on your mind today?
+Elena Vasquez: A prospect reached out asking if they could talk to a reference customer, would you be willing?
+Teodora Ilic: Happy to help if it's a good fit, let me get some context on the prospect first.
+Elena Vasquez: Sounds good, appreciate you looking into it.
+Teodora Ilic: Of course, I'll follow up with next steps by end of week.",75,reference_request,12,Reference Requests & Contract Follow-ups,reference/case study,"A prospect reached out asking if they could talk to a reference customer, would you be willing? Sounds good, appreciate you looking into it.",0.802,0.55,positive,2026-09-21,False
+CALL-0101,external,2026-09-25,8,Union Square Media,"['Priya Anand', 'Chris Patel']","Priya Anand: Hi Chris Patel, thanks for hopping on, what's on your mind today?
+Chris Patel: Legal wants to revisit the data processing addendum before we sign the renewal.
+Priya Anand: No problem, I'll loop in our legal team and get a redline turned around quickly.
+Chris Patel: Sounds good, appreciate you looking into it.
+Priya Anand: Of course, I'll follow up with next steps by end of week.",69,contract_terms,12,Reference Requests & Contract Follow-ups,contract/legal,"Legal wants to revisit the data processing addendum before we sign the renewal. Sounds good, appreciate you looking into it.",0.7269,0.0,neutral,2026-09-21,False
+CALL-0102,internal,2026-09-28,15,Platform Team,['Tobias Krantz'],"Sofia Reyes: We've had a few customers ask for updated SOC 2 documentation and data residency details this quarter.
+Beatriz Souza: That's been coming up more as we land larger enterprise accounts, makes sense.
+Sofia Reyes: Let's make sure the compliance packet is easy for account teams to hand out without looping in engineering every time.
+Beatriz Souza: Agreed, I can help put together a self-serve doc with the common things that get asked.",74,security_review,5,Security & Compliance Documentation,security/compliance,"Sofia Reyes: We've had a few customers ask for updated SOC 2 documentation and data residency details this quarter.
+Beatriz Souza: That's been coming up more as we land larger enterprise accounts, makes sense.
+Sofia Reyes: Let's make sure the compliance packet is easy for account teams to hand out without looping in engineering every time.
+Beatriz Souza: Agreed, I can help put together a self-serve doc with the common things that get asked.",0.9042,0.0,neutral,2026-09-28,False
+CALL-0103,support,2026-09-28,14,Ashford Realty Group,"['Liam Chen', 'Priya Nair']","Priya Nair: Hey, Priya Nair here, hoping you can help with something.
+Liam Chen: Of course, what's going on?
+Priya Nair: Our security team needs your latest SOC 2 report before we can expand usage.
+Liam Chen: I can get that sent over today, we recertified in April so it should be current.
+Priya Nair: Okay, that makes sense, thanks for explaining.
+Liam Chen: Not at the moment, I'll follow up once this is fully resolved on our end.",79,security_compliance,5,Security & Compliance Documentation,security/compliance,"Hey, Priya Nair here, hoping you can help with something. Our security team needs your latest SOC 2 report before we can expand usage. Okay, that makes sense, thanks for explaining.",0.9186,0.0,neutral,2026-09-28,False

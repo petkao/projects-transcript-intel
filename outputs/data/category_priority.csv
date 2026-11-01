@@ -1,0 +1,14 @@
+category,n,mean_sentiment,priority_score
+Export/Reporting Bug -- Customer Impact,19,-0.3368421052631579,6.3999999999999995
+Mixed: Export Escalation Urgency + Staffing,10,-0.42000000000000004,4.2
+Churn Risk Review & Retention Strategy,7,-0.5642857142857143,3.95
+Login/SSO & General Support Resolution,6,-0.44166666666666665,2.65
+Competitive Threat (Pricing/Capability Gap),7,-0.24285714285714285,1.7
+Incident Postmortem (Infra/Performance),4,-0.15,0.6
+Sprint Planning & Eng Backlog,6,-0.06666666666666664,0.3999999999999998
+Roadmap Prioritization & Signal Gaps,4,-0.05,0.2
+Healthy Renewal & Expansion,7,0.8,-0.0
+Reference Requests & Contract Follow-ups,4,0.41250000000000003,-0.0
+Routine Support Resolution & Check-ins,9,0.16666666666666666,-0.0
+Security & Compliance Documentation,5,0.0,-0.0
+"Smart Alerts Launch, Upsell & QBR",15,0.5,-0.0

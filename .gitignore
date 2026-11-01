@@ -1,0 +1,17 @@
+# OS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Node
+node_modules/
+
+# PowerPoint lock files
+slides/~$*.pptx
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
